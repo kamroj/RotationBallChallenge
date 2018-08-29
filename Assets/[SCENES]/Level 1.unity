@@ -190,6 +190,7 @@ GameObject:
   - component: {fileID: 441772251}
   - component: {fileID: 441772250}
   - component: {fileID: 441772254}
+  - component: {fileID: 441772253}
   m_Layer: 0
   m_Name: SceneContext
   m_TagString: Untagged
@@ -210,6 +211,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ball: {fileID: 1411654322}
   playerInputController: {fileID: 441772254}
+  camera: {fileID: 441772253}
 --- !u!114 &441772251
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -242,6 +244,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &441772253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 441772249}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8028fd9ea3e27ce4f92640b06e6d357a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _camera: {fileID: 583678427}
+  zoomSpeed: 5.85
 --- !u!114 &441772254
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -350,7 +365,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4633006549153788, guid: f6848029f0809be4bb690eb7339f1096, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -3.08
+      value: -2.43
       objectReference: {fileID: 0}
     - target: {fileID: 4633006549153788, guid: f6848029f0809be4bb690eb7339f1096, type: 2}
       propertyPath: m_LocalPosition.z

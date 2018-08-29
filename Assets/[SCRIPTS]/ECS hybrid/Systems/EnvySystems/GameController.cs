@@ -17,6 +17,7 @@ namespace RotationBall
     {
         BallComponents _ballComponents;
         SignalBus _signalBus;
+        ChangeSceneByZoomView _changeSceneByZoom;
         GameStates _state = GameStates.Playing;
 
         public GameStates State
@@ -24,10 +25,11 @@ namespace RotationBall
             get { return _state; }
         }
 
-        public GameController(BallComponents ballComponents, SignalBus signalBus)
+        public GameController(BallComponents ballComponents, SignalBus signalBus, ChangeSceneByZoomView changeSceneByZoom)
         {
             _ballComponents = ballComponents;
             _signalBus = signalBus;
+            _changeSceneByZoom = changeSceneByZoom;
         }
 
         public void Initialize()
@@ -59,6 +61,7 @@ namespace RotationBall
         void OnBallTouchedCollider()
         {
             Debug.Log("I hit colider");
+            _changeSceneByZoom.StartZoomingInTheCamera();
         }
 
         void UpdateGameOver()

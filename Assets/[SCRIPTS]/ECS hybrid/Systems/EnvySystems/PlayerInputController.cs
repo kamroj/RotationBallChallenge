@@ -3,45 +3,77 @@ using System.Collections.Generic;
 using UnityEngine;
 using Zenject;
 
-public class PlayerInputController : MonoBehaviour
+namespace RotationBall
 {
-
-    EnvyRotationHandler rotationHandler;
-    PlayerMovementHandler movementHandler;
-
-    [Header("Adjust parameters")]
-    public GameObject envy;
-    public float speed;
-    public float rotationTime;
-
-
-    [Inject]
-    private void Initialize(EnvyRotationHandler _rotationHandler, PlayerMovementHandler _movementHandler)
+    public class PlayerInputController : MonoBehaviour
     {
-        rotationHandler = _rotationHandler;
-        movementHandler = _movementHandler;        
 
-    }
+        EnvyRotationHandler rotationHandler;
+        PlayerMovementHandler movementHandler;
 
-    private void Update()
-    {
-        TryRotate();
-        movementHandler.TryMove();
-    }
 
-    private void OnDestroy()
-    {
-        rotationHandler = null;
-    }
+        [Header("Adjust parameters")]
+        [SerializeField] GameObject envy;
+        [SerializeField] Transform playerBall;
 
-    private void TryRotate()
-    {        
-        var fromAngle = envy.transform.rotation;
-        var toAngle = Quaternion.Euler(envy.transform.eulerAngles + (Vector3.forward * 90));
+        public float speed;
+        public float rotationTime;        
+        public float pointX;
+        public float pointY;
+        public bool isGrounded;
 
-        if (Input.GetKeyDown(KeyCode.Space))
-        {            
-            StartCoroutine(rotationHandler.rotationEnumerator(fromAngle, toAngle, envy, rotationTime));
-        }        
+
+        [Inject]
+        private void Initialize(EnvyRotationHandler _rotationHandler, PlayerMovementHandler _movementHandler)
+        {
+            rotationHandler = _rotationHandler;
+            movementHandler = _movementHandler;
+        }
+
+        private void Update()
+        {
+            CheckIfGrounded();
+            TryRotate();
+            movementHandler.TryMove();
+            TryJump();
+        }
+
+        private void OnDestroy()
+        {
+            rotationHandler = null;
+        }
+
+        private void TryRotate()
+        {
+            var fromAngle = envy.transform.rotation;
+            var toAngle = Quaternion.Euler(envy.transform.eulerAngles + (Vector3.forward * 90));
+
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                StartCoroutine(rotationHandler.rotationEnumerator(fromAngle, toAngle, envy, rotationTime));
+            }
+        }
+
+        private void TryJump()
+        {
+            if (Input.GetKeyDown(KeyCode.W))
+            {
+                movementHandler.TryJump();
+            }
+        }
+
+
+        //gdzie to dać
+        private void CheckIfGrounded()
+        {
+            isGrounded = Physics2D.OverlapBox(new Vector2(playerBall.position.x, playerBall.position.y),
+                         new Vector2(playerBall.position.x + pointX, playerBall.position.y - pointY), 0f);
+        }
+
+        //private void OnDrawGizmos()
+        //{
+        //    Gizmos.color = new Color(0, 1, 0, 0.5f);
+        //    Gizmos.DrawCube(new Vector2(playerBall.position.x - ajdust, playerBall.position.y - ajdust), new Vector2(playerBall.position.x + ajdust, playerBall.position.y + ajdust));
+        //}
     }
 }

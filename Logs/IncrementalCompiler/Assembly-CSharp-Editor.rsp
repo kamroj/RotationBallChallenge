@@ -2,10 +2,10 @@
 -target:library
 -nowarn:0169
 -langversion:7
--out:C:/Users/Kamil/Documents/repos/Unity2/RotationBall/Temp/Assembly-CSharp-Editor.dll
+-out:D:/RotationBall/Temp/Assembly-CSharp-Editor.dll
 -nostdlib
 -unsafe
--r:C:/Users/Kamil/Documents/repos/Unity2/RotationBall/Library/ScriptAssemblies/Assembly-CSharp.dll
+-r:D:/RotationBall/Library/ScriptAssemblies/Assembly-CSharp.dll
 -r:"C:\Program Files\Unity\Hub\Editor\2018.2.5f1\Editor\Data\Managed/UnityEngine/UnityEngine.dll"
 -r:"C:\Program Files\Unity\Hub\Editor\2018.2.5f1\Editor\Data\Managed/UnityEngine/UnityEngine.AIModule.dll"
 -r:"C:\Program Files\Unity\Hub\Editor\2018.2.5f1\Editor\Data\Managed/UnityEngine/UnityEngine.ARModule.dll"
@@ -69,29 +69,29 @@
 -r:"C:\Program Files\Unity\Hub\Editor\2018.2.5f1\Editor\Data\Managed/UnityEngine/UnityEngine.XRModule.dll"
 -r:"C:\Program Files\Unity\Hub\Editor\2018.2.5f1\Editor\Data\Managed/UnityEditor.dll"
 -r:"C:\Program Files\Unity\Hub\Editor\2018.2.5f1\Editor\Data\Managed/Unity.Locator.dll"
--r:C:/Users/Kamil/Documents/repos/Unity2/RotationBall/Library/ScriptAssemblies/Zenject-Editor.dll
--r:C:/Users/Kamil/Documents/repos/Unity2/RotationBall/Library/ScriptAssemblies/Unity.Entities.Properties.dll
--r:C:/Users/Kamil/Documents/repos/Unity2/RotationBall/Library/ScriptAssemblies/Unity.Properties.Codegen.dll
--r:C:/Users/Kamil/Documents/repos/Unity2/RotationBall/Library/ScriptAssemblies/Unity.Jobs.dll
--r:C:/Users/Kamil/Documents/repos/Unity2/RotationBall/Library/ScriptAssemblies/Unity.Jobs.Editor.dll
--r:C:/Users/Kamil/Documents/repos/Unity2/RotationBall/Library/ScriptAssemblies/Unity.Entities.Editor.dll
--r:C:/Users/Kamil/Documents/repos/Unity2/RotationBall/Library/ScriptAssemblies/Unity.Properties.dll
--r:C:/Users/Kamil/Documents/repos/Unity2/RotationBall/Library/ScriptAssemblies/Unity.Collections.dll
--r:C:/Users/Kamil/Documents/repos/Unity2/RotationBall/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll
--r:C:/Users/Kamil/Documents/repos/Unity2/RotationBall/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll
--r:C:/Users/Kamil/Documents/repos/Unity2/RotationBall/Library/ScriptAssemblies/Unity.Burst.dll
--r:C:/Users/Kamil/Documents/repos/Unity2/RotationBall/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll
--r:C:/Users/Kamil/Documents/repos/Unity2/RotationBall/Library/ScriptAssemblies/Unity.Rendering.Hybrid.dll
--r:C:/Users/Kamil/Documents/repos/Unity2/RotationBall/Library/ScriptAssemblies/Unity.Properties.Editor.dll
--r:C:/Users/Kamil/Documents/repos/Unity2/RotationBall/Library/ScriptAssemblies/Unity.Entities.Hybrid.dll
--r:C:/Users/Kamil/Documents/repos/Unity2/RotationBall/Library/ScriptAssemblies/Unity.Mathematics.dll
--r:C:/Users/Kamil/Documents/repos/Unity2/RotationBall/Library/ScriptAssemblies/Unity.Entities.dll
--r:C:/Users/Kamil/Documents/repos/Unity2/RotationBall/Library/ScriptAssemblies/Unity.Transforms.dll
--r:C:/Users/Kamil/Documents/repos/Unity2/RotationBall/Library/ScriptAssemblies/Unity.Burst.Editor.dll
--r:C:/Users/Kamil/Documents/repos/Unity2/RotationBall/Library/ScriptAssemblies/Zenject-PoolMonitor-Editor.dll
--r:C:/Users/Kamil/Documents/repos/Unity2/RotationBall/Library/ScriptAssemblies/Unity.TextMeshPro.dll
--r:C:/Users/Kamil/Documents/repos/Unity2/RotationBall/Library/ScriptAssemblies/Zenject.dll
--r:C:/Users/Kamil/Documents/repos/Unity2/RotationBall/Library/ScriptAssemblies/Unity.Transforms.Hybrid.dll
+-r:D:/RotationBall/Library/ScriptAssemblies/Zenject-Editor.dll
+-r:D:/RotationBall/Library/ScriptAssemblies/Unity.Entities.Properties.dll
+-r:D:/RotationBall/Library/ScriptAssemblies/Unity.Properties.Codegen.dll
+-r:D:/RotationBall/Library/ScriptAssemblies/Unity.Jobs.dll
+-r:D:/RotationBall/Library/ScriptAssemblies/Unity.Jobs.Editor.dll
+-r:D:/RotationBall/Library/ScriptAssemblies/Unity.Entities.Editor.dll
+-r:D:/RotationBall/Library/ScriptAssemblies/Unity.Properties.dll
+-r:D:/RotationBall/Library/ScriptAssemblies/Unity.Collections.dll
+-r:D:/RotationBall/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll
+-r:D:/RotationBall/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll
+-r:D:/RotationBall/Library/ScriptAssemblies/Unity.Burst.dll
+-r:D:/RotationBall/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll
+-r:D:/RotationBall/Library/ScriptAssemblies/Unity.Rendering.Hybrid.dll
+-r:D:/RotationBall/Library/ScriptAssemblies/Unity.Properties.Editor.dll
+-r:D:/RotationBall/Library/ScriptAssemblies/Unity.Entities.Hybrid.dll
+-r:D:/RotationBall/Library/ScriptAssemblies/Unity.Mathematics.dll
+-r:D:/RotationBall/Library/ScriptAssemblies/Unity.Entities.dll
+-r:D:/RotationBall/Library/ScriptAssemblies/Unity.Transforms.dll
+-r:D:/RotationBall/Library/ScriptAssemblies/Unity.Burst.Editor.dll
+-r:D:/RotationBall/Library/ScriptAssemblies/Zenject-PoolMonitor-Editor.dll
+-r:D:/RotationBall/Library/ScriptAssemblies/Unity.TextMeshPro.dll
+-r:D:/RotationBall/Library/ScriptAssemblies/Zenject.dll
+-r:D:/RotationBall/Library/ScriptAssemblies/Unity.Transforms.Hybrid.dll
 -r:"C:/Program Files/Unity/Hub/Editor/2018.2.5f1/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll"
 -r:"C:/Program Files/Unity/Hub/Editor/2018.2.5f1/Editor/Data/UnityExtensions/Unity/GUISystem/Editor/UnityEditor.UI.dll"
 -r:"C:/Program Files/Unity/Hub/Editor/2018.2.5f1/Editor/Data/UnityExtensions/Unity/TestRunner/Editor/UnityEditor.TestRunner.dll"
@@ -111,7 +111,7 @@
 -r:"C:/Program Files/Unity/Hub/Editor/2018.2.5f1/Editor/Data/UnityExtensions/Unity/UnityVR/Editor/UnityEditor.VR.dll"
 -r:"C:/Program Files/Unity/Hub/Editor/2018.2.5f1/Editor/Data/Managed/UnityEditor.Graphs.dll"
 -r:"C:/Program Files/Unity/Hub/Editor/2018.2.5f1/Editor/Data/PlaybackEngines/windowsstandalonesupport/UnityEditor.WindowsStandalone.Extensions.dll"
--r:"C:/Users/Kamil/Documents/repos/Unity2/RotationBall/Assets/[OTHER PACKAGES]/Plugins/Zenject/Source/Usage/Zenject-usage.dll"
+-r:"D:/RotationBall/Assets/[OTHER PACKAGES]/Plugins/Zenject/Source/Usage/Zenject-usage.dll"
 -r:C:/Users/Kamil/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.ads@2.0.8/Editor/UnityEditor.Advertisements.dll
 -r:C:/Users/Kamil/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.analytics@2.0.16/UnityEngine.Analytics.dll
 -r:C:/Users/Kamil/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.analytics@2.0.16/Editor/UnityEditor.Analytics.dll
@@ -334,36 +334,35 @@
 -d:UNITY_EDITOR_WIN
 -d:ENABLE_UNITY_COLLECTIONS_CHECKS
 -d:ENABLE_BURST_AOT
--d:UNITY_TEAM_LICENSE
 -d:ENABLE_VSTU
--i:"C:/Users/Kamil/Documents/repos/Unity2/RotationBall/Assets/[OTHER PACKAGES]/Spine/spine-unity/Editor/AnimationReferenceAssetEditor.cs"
--i:"C:/Users/Kamil/Documents/repos/Unity2/RotationBall/Assets/[OTHER PACKAGES]/Spine/spine-unity/Editor/AssetDatabaseAvailabilityDetector.cs"
--i:"C:/Users/Kamil/Documents/repos/Unity2/RotationBall/Assets/[OTHER PACKAGES]/Spine/spine-unity/Editor/AtlasAssetInspector.cs"
--i:"C:/Users/Kamil/Documents/repos/Unity2/RotationBall/Assets/[OTHER PACKAGES]/Spine/spine-unity/Editor/BoneFollowerInspector.cs"
--i:"C:/Users/Kamil/Documents/repos/Unity2/RotationBall/Assets/[OTHER PACKAGES]/Spine/spine-unity/Editor/Menus.cs"
--i:"C:/Users/Kamil/Documents/repos/Unity2/RotationBall/Assets/[OTHER PACKAGES]/Spine/spine-unity/Editor/PointFollowerEditor.cs"
--i:"C:/Users/Kamil/Documents/repos/Unity2/RotationBall/Assets/[OTHER PACKAGES]/Spine/spine-unity/Editor/SkeletonAnimationInspector.cs"
--i:"C:/Users/Kamil/Documents/repos/Unity2/RotationBall/Assets/[OTHER PACKAGES]/Spine/spine-unity/Editor/SkeletonAnimatorInspector.cs"
--i:"C:/Users/Kamil/Documents/repos/Unity2/RotationBall/Assets/[OTHER PACKAGES]/Spine/spine-unity/Editor/SkeletonBaker.cs"
--i:"C:/Users/Kamil/Documents/repos/Unity2/RotationBall/Assets/[OTHER PACKAGES]/Spine/spine-unity/Editor/SkeletonBakingWindow.cs"
--i:"C:/Users/Kamil/Documents/repos/Unity2/RotationBall/Assets/[OTHER PACKAGES]/Spine/spine-unity/Editor/SkeletonDataAssetInspector.cs"
--i:"C:/Users/Kamil/Documents/repos/Unity2/RotationBall/Assets/[OTHER PACKAGES]/Spine/spine-unity/Editor/SkeletonDebugWindow.cs"
--i:"C:/Users/Kamil/Documents/repos/Unity2/RotationBall/Assets/[OTHER PACKAGES]/Spine/spine-unity/Editor/SkeletonRendererInspector.cs"
--i:"C:/Users/Kamil/Documents/repos/Unity2/RotationBall/Assets/[OTHER PACKAGES]/Spine/spine-unity/Editor/SpineAttributeDrawers.cs"
--i:"C:/Users/Kamil/Documents/repos/Unity2/RotationBall/Assets/[OTHER PACKAGES]/Spine/spine-unity/Editor/SpineEditorUtilities.cs"
--i:"C:/Users/Kamil/Documents/repos/Unity2/RotationBall/Assets/[OTHER PACKAGES]/Spine/spine-unity/Editor/SpineInspectorUtility.cs"
--i:"C:/Users/Kamil/Documents/repos/Unity2/RotationBall/Assets/[OTHER PACKAGES]/Spine/spine-unity/Modules/BoundingBoxFollower/Editor/BoundingBoxFollowerInspector.cs"
--i:"C:/Users/Kamil/Documents/repos/Unity2/RotationBall/Assets/[OTHER PACKAGES]/Spine/spine-unity/Modules/CustomMaterials/Editor/SkeletonRendererCustomMaterialsInspector.cs"
--i:"C:/Users/Kamil/Documents/repos/Unity2/RotationBall/Assets/[OTHER PACKAGES]/Spine/spine-unity/Modules/Ragdoll/Editor/SkeletonRagdoll2DInspector.cs"
--i:"C:/Users/Kamil/Documents/repos/Unity2/RotationBall/Assets/[OTHER PACKAGES]/Spine/spine-unity/Modules/Ragdoll/Editor/SkeletonRagdollInspector.cs"
--i:"C:/Users/Kamil/Documents/repos/Unity2/RotationBall/Assets/[OTHER PACKAGES]/Spine/spine-unity/Modules/Shaders/Sprite/Editor/SpineSpriteShaderGUI.cs"
--i:"C:/Users/Kamil/Documents/repos/Unity2/RotationBall/Assets/[OTHER PACKAGES]/Spine/spine-unity/Modules/SkeletonGraphic/Editor/BoneFollowerGraphicInspector.cs"
--i:"C:/Users/Kamil/Documents/repos/Unity2/RotationBall/Assets/[OTHER PACKAGES]/Spine/spine-unity/Modules/SkeletonGraphic/Editor/SkeletonGraphicInspector.cs"
--i:"C:/Users/Kamil/Documents/repos/Unity2/RotationBall/Assets/[OTHER PACKAGES]/Spine/spine-unity/Modules/SkeletonRenderSeparator/Editor/SkeletonPartsRendererInspector.cs"
--i:"C:/Users/Kamil/Documents/repos/Unity2/RotationBall/Assets/[OTHER PACKAGES]/Spine/spine-unity/Modules/SkeletonRenderSeparator/Editor/SkeletonRenderSeparatorInspector.cs"
--i:"C:/Users/Kamil/Documents/repos/Unity2/RotationBall/Assets/[OTHER PACKAGES]/Spine/spine-unity/Modules/SlotBlendModes/Editor/SlotBlendModesEditor.cs"
--i:"C:/Users/Kamil/Documents/repos/Unity2/RotationBall/Assets/[OTHER PACKAGES]/Spine/spine-unity/Modules/Timeline/SpineAnimationState/Editor/SpineAnimationStateDrawer.cs"
--i:"C:/Users/Kamil/Documents/repos/Unity2/RotationBall/Assets/[OTHER PACKAGES]/Spine/spine-unity/Modules/Timeline/SpineSkeletonFlip/Editor/SpineSkeletonFlipDrawer.cs"
--i:"C:/Users/Kamil/Documents/repos/Unity2/RotationBall/Assets/[OTHER PACKAGES]/Spine/spine-unity/SkeletonUtility/Editor/SkeletonUtilityBoneInspector.cs"
--i:"C:/Users/Kamil/Documents/repos/Unity2/RotationBall/Assets/[OTHER PACKAGES]/Spine/spine-unity/SkeletonUtility/Editor/SkeletonUtilityInspector.cs"
+-i:"D:/RotationBall/Assets/[OTHER PACKAGES]/Spine/spine-unity/Editor/AnimationReferenceAssetEditor.cs"
+-i:"D:/RotationBall/Assets/[OTHER PACKAGES]/Spine/spine-unity/Editor/AssetDatabaseAvailabilityDetector.cs"
+-i:"D:/RotationBall/Assets/[OTHER PACKAGES]/Spine/spine-unity/Editor/AtlasAssetInspector.cs"
+-i:"D:/RotationBall/Assets/[OTHER PACKAGES]/Spine/spine-unity/Editor/BoneFollowerInspector.cs"
+-i:"D:/RotationBall/Assets/[OTHER PACKAGES]/Spine/spine-unity/Editor/Menus.cs"
+-i:"D:/RotationBall/Assets/[OTHER PACKAGES]/Spine/spine-unity/Editor/PointFollowerEditor.cs"
+-i:"D:/RotationBall/Assets/[OTHER PACKAGES]/Spine/spine-unity/Editor/SkeletonAnimationInspector.cs"
+-i:"D:/RotationBall/Assets/[OTHER PACKAGES]/Spine/spine-unity/Editor/SkeletonAnimatorInspector.cs"
+-i:"D:/RotationBall/Assets/[OTHER PACKAGES]/Spine/spine-unity/Editor/SkeletonBaker.cs"
+-i:"D:/RotationBall/Assets/[OTHER PACKAGES]/Spine/spine-unity/Editor/SkeletonBakingWindow.cs"
+-i:"D:/RotationBall/Assets/[OTHER PACKAGES]/Spine/spine-unity/Editor/SkeletonDataAssetInspector.cs"
+-i:"D:/RotationBall/Assets/[OTHER PACKAGES]/Spine/spine-unity/Editor/SkeletonDebugWindow.cs"
+-i:"D:/RotationBall/Assets/[OTHER PACKAGES]/Spine/spine-unity/Editor/SkeletonRendererInspector.cs"
+-i:"D:/RotationBall/Assets/[OTHER PACKAGES]/Spine/spine-unity/Editor/SpineAttributeDrawers.cs"
+-i:"D:/RotationBall/Assets/[OTHER PACKAGES]/Spine/spine-unity/Editor/SpineEditorUtilities.cs"
+-i:"D:/RotationBall/Assets/[OTHER PACKAGES]/Spine/spine-unity/Editor/SpineInspectorUtility.cs"
+-i:"D:/RotationBall/Assets/[OTHER PACKAGES]/Spine/spine-unity/Modules/BoundingBoxFollower/Editor/BoundingBoxFollowerInspector.cs"
+-i:"D:/RotationBall/Assets/[OTHER PACKAGES]/Spine/spine-unity/Modules/CustomMaterials/Editor/SkeletonRendererCustomMaterialsInspector.cs"
+-i:"D:/RotationBall/Assets/[OTHER PACKAGES]/Spine/spine-unity/Modules/Ragdoll/Editor/SkeletonRagdoll2DInspector.cs"
+-i:"D:/RotationBall/Assets/[OTHER PACKAGES]/Spine/spine-unity/Modules/Ragdoll/Editor/SkeletonRagdollInspector.cs"
+-i:"D:/RotationBall/Assets/[OTHER PACKAGES]/Spine/spine-unity/Modules/Shaders/Sprite/Editor/SpineSpriteShaderGUI.cs"
+-i:"D:/RotationBall/Assets/[OTHER PACKAGES]/Spine/spine-unity/Modules/SkeletonGraphic/Editor/BoneFollowerGraphicInspector.cs"
+-i:"D:/RotationBall/Assets/[OTHER PACKAGES]/Spine/spine-unity/Modules/SkeletonGraphic/Editor/SkeletonGraphicInspector.cs"
+-i:"D:/RotationBall/Assets/[OTHER PACKAGES]/Spine/spine-unity/Modules/SkeletonRenderSeparator/Editor/SkeletonPartsRendererInspector.cs"
+-i:"D:/RotationBall/Assets/[OTHER PACKAGES]/Spine/spine-unity/Modules/SkeletonRenderSeparator/Editor/SkeletonRenderSeparatorInspector.cs"
+-i:"D:/RotationBall/Assets/[OTHER PACKAGES]/Spine/spine-unity/Modules/SlotBlendModes/Editor/SlotBlendModesEditor.cs"
+-i:"D:/RotationBall/Assets/[OTHER PACKAGES]/Spine/spine-unity/Modules/Timeline/SpineAnimationState/Editor/SpineAnimationStateDrawer.cs"
+-i:"D:/RotationBall/Assets/[OTHER PACKAGES]/Spine/spine-unity/Modules/Timeline/SpineSkeletonFlip/Editor/SpineSkeletonFlipDrawer.cs"
+-i:"D:/RotationBall/Assets/[OTHER PACKAGES]/Spine/spine-unity/SkeletonUtility/Editor/SkeletonUtilityBoneInspector.cs"
+-i:"D:/RotationBall/Assets/[OTHER PACKAGES]/Spine/spine-unity/SkeletonUtility/Editor/SkeletonUtilityInspector.cs"
 -v:0

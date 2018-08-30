@@ -2,10 +2,10 @@
 -target:library
 -nowarn:0169
 -langversion:7
--out:D:/RotationBall/Temp/Zenject-Editor.dll
+-out:C:/Users/Kamil/Documents/repos/Unity2/RotationBall/Temp/Zenject-Editor.dll
 -nostdlib
 -unsafe
--r:D:/RotationBall/Library/ScriptAssemblies/Zenject.dll
+-r:C:/Users/Kamil/Documents/repos/Unity2/RotationBall/Library/ScriptAssemblies/Zenject.dll
 -r:"C:\Program Files\Unity\Hub\Editor\2018.2.5f1\Editor\Data\Managed/UnityEngine/UnityEngine.dll"
 -r:"C:\Program Files\Unity\Hub\Editor\2018.2.5f1\Editor\Data\Managed/UnityEngine/UnityEngine.AIModule.dll"
 -r:"C:\Program Files\Unity\Hub\Editor\2018.2.5f1\Editor\Data\Managed/UnityEngine/UnityEngine.ARModule.dll"
@@ -85,7 +85,7 @@
 -r:"C:/Program Files/Unity/Hub/Editor/2018.2.5f1/Editor/Data/UnityExtensions/Unity/UnityVR/Editor/UnityEditor.VR.dll"
 -r:"C:/Program Files/Unity/Hub/Editor/2018.2.5f1/Editor/Data/Managed/UnityEditor.Graphs.dll"
 -r:"C:/Program Files/Unity/Hub/Editor/2018.2.5f1/Editor/Data/PlaybackEngines/windowsstandalonesupport/UnityEditor.WindowsStandalone.Extensions.dll"
--r:"D:/RotationBall/Assets/[OTHER PACKAGES]/Plugins/Zenject/Source/Usage/Zenject-usage.dll"
+-r:"C:/Users/Kamil/Documents/repos/Unity2/RotationBall/Assets/[OTHER PACKAGES]/Plugins/Zenject/Source/Usage/Zenject-usage.dll"
 -r:C:/Users/Kamil/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.ads@2.0.8/Editor/UnityEditor.Advertisements.dll
 -r:C:/Users/Kamil/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.analytics@2.0.16/UnityEngine.Analytics.dll
 -r:C:/Users/Kamil/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.analytics@2.0.16/Editor/UnityEditor.Analytics.dll
@@ -308,19 +308,20 @@
 -d:UNITY_EDITOR_WIN
 -d:ENABLE_UNITY_COLLECTIONS_CHECKS
 -d:ENABLE_BURST_AOT
+-d:UNITY_TEAM_LICENSE
 -d:ENABLE_VSTU
--i:"D:/RotationBall/Assets/[OTHER PACKAGES]/Plugins/Zenject/Source/Editor/Editors/ContextEditor.cs"
--i:"D:/RotationBall/Assets/[OTHER PACKAGES]/Plugins/Zenject/Source/Editor/Editors/GameObjectContextEditor.cs"
--i:"D:/RotationBall/Assets/[OTHER PACKAGES]/Plugins/Zenject/Source/Editor/Editors/ProjectContextEditor.cs"
--i:"D:/RotationBall/Assets/[OTHER PACKAGES]/Plugins/Zenject/Source/Editor/Editors/RunnableContextEditor.cs"
--i:"D:/RotationBall/Assets/[OTHER PACKAGES]/Plugins/Zenject/Source/Editor/Editors/SceneContextEditor.cs"
--i:"D:/RotationBall/Assets/[OTHER PACKAGES]/Plugins/Zenject/Source/Editor/Editors/SceneDecoratorContextEditor.cs"
--i:"D:/RotationBall/Assets/[OTHER PACKAGES]/Plugins/Zenject/Source/Editor/EditorStaticInstaller.cs"
--i:"D:/RotationBall/Assets/[OTHER PACKAGES]/Plugins/Zenject/Source/Editor/EditorWindow/ZenjectEditorWindow.cs"
--i:"D:/RotationBall/Assets/[OTHER PACKAGES]/Plugins/Zenject/Source/Editor/ObjectGraphVisualizer.cs"
--i:"D:/RotationBall/Assets/[OTHER PACKAGES]/Plugins/Zenject/Source/Editor/SceneParentLoading/DefaultSceneContractConfig.cs"
--i:"D:/RotationBall/Assets/[OTHER PACKAGES]/Plugins/Zenject/Source/Editor/SceneParentLoading/SceneParentAutomaticLoader.cs"
--i:"D:/RotationBall/Assets/[OTHER PACKAGES]/Plugins/Zenject/Source/Editor/UnityInspectorListEditor.cs"
--i:"D:/RotationBall/Assets/[OTHER PACKAGES]/Plugins/Zenject/Source/Editor/ZenMenuItems.cs"
--i:"D:/RotationBall/Assets/[OTHER PACKAGES]/Plugins/Zenject/Source/Editor/ZenUnityEditorUtil.cs"
+-i:"C:/Users/Kamil/Documents/repos/Unity2/RotationBall/Assets/[OTHER PACKAGES]/Plugins/Zenject/Source/Editor/Editors/ContextEditor.cs"
+-i:"C:/Users/Kamil/Documents/repos/Unity2/RotationBall/Assets/[OTHER PACKAGES]/Plugins/Zenject/Source/Editor/Editors/GameObjectContextEditor.cs"
+-i:"C:/Users/Kamil/Documents/repos/Unity2/RotationBall/Assets/[OTHER PACKAGES]/Plugins/Zenject/Source/Editor/Editors/ProjectContextEditor.cs"
+-i:"C:/Users/Kamil/Documents/repos/Unity2/RotationBall/Assets/[OTHER PACKAGES]/Plugins/Zenject/Source/Editor/Editors/RunnableContextEditor.cs"
+-i:"C:/Users/Kamil/Documents/repos/Unity2/RotationBall/Assets/[OTHER PACKAGES]/Plugins/Zenject/Source/Editor/Editors/SceneContextEditor.cs"
+-i:"C:/Users/Kamil/Documents/repos/Unity2/RotationBall/Assets/[OTHER PACKAGES]/Plugins/Zenject/Source/Editor/Editors/SceneDecoratorContextEditor.cs"
+-i:"C:/Users/Kamil/Documents/repos/Unity2/RotationBall/Assets/[OTHER PACKAGES]/Plugins/Zenject/Source/Editor/EditorStaticInstaller.cs"
+-i:"C:/Users/Kamil/Documents/repos/Unity2/RotationBall/Assets/[OTHER PACKAGES]/Plugins/Zenject/Source/Editor/EditorWindow/ZenjectEditorWindow.cs"
+-i:"C:/Users/Kamil/Documents/repos/Unity2/RotationBall/Assets/[OTHER PACKAGES]/Plugins/Zenject/Source/Editor/ObjectGraphVisualizer.cs"
+-i:"C:/Users/Kamil/Documents/repos/Unity2/RotationBall/Assets/[OTHER PACKAGES]/Plugins/Zenject/Source/Editor/SceneParentLoading/DefaultSceneContractConfig.cs"
+-i:"C:/Users/Kamil/Documents/repos/Unity2/RotationBall/Assets/[OTHER PACKAGES]/Plugins/Zenject/Source/Editor/SceneParentLoading/SceneParentAutomaticLoader.cs"
+-i:"C:/Users/Kamil/Documents/repos/Unity2/RotationBall/Assets/[OTHER PACKAGES]/Plugins/Zenject/Source/Editor/UnityInspectorListEditor.cs"
+-i:"C:/Users/Kamil/Documents/repos/Unity2/RotationBall/Assets/[OTHER PACKAGES]/Plugins/Zenject/Source/Editor/ZenMenuItems.cs"
+-i:"C:/Users/Kamil/Documents/repos/Unity2/RotationBall/Assets/[OTHER PACKAGES]/Plugins/Zenject/Source/Editor/ZenUnityEditorUtil.cs"
 -v:0

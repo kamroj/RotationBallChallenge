@@ -41,16 +41,7 @@ namespace RotationBall
                 yield return new WaitForSeconds(0.001f);
                 _camera.orthographicSize -= zoomSpeed1;
             }
-            _camera.orthographicSize = 0.01f;
-
-            //if (_camera.orthographicSize > 0.1f)
-            //{
-            //    for (var t = 0f; t < 5f; ++t)
-            //    {
-            //        _camera.orthographicSize -= t;
-            //        yield return null;
-            //    }
-            //}        
+            _camera.orthographicSize = 0.01f;                  
         }
 
         IEnumerator cameraEnumeratorToPlayer()
@@ -61,8 +52,7 @@ namespace RotationBall
             {                
                 _camera.transform.position = Vector2.Lerp(currCameraPosition, currBallPosition, t);
                 yield return null;
-            }
-            //gameObject.transform.rotation = toAngle;
+            }            
         }
     }
 }

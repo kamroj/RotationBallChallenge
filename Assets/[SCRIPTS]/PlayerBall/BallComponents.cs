@@ -10,8 +10,7 @@ namespace RotationBall
         [SerializeField] Rigidbody2D _rigidBody2D = null;
         [SerializeField] GameObject _playerBall = null;
         [SerializeField] Transform playerBallTransform = null;
-        [SerializeField] BallPositionEnum _ballStateMain;
-        //[SerializeField] Collider2D collider2D;
+        [SerializeField] BallPositionEnum _ballStateMain;        
 
         SignalBus _signalBus;
         public float speed;

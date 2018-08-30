@@ -9,10 +9,13 @@ namespace RotationBall
     {
         [SerializeField] Rigidbody2D _rigidBody2D = null;
         [SerializeField] GameObject _playerBall = null;
+        [SerializeField] Transform playerBallTransform = null;
         [SerializeField] BallPositionEnum _ballStateMain;
         //[SerializeField] Collider2D collider2D;
 
         SignalBus _signalBus;
+        public float speed;
+        public float jumpForce;
 
         [Inject]
         public void Contr(SignalBus signalBus)
@@ -20,8 +23,10 @@ namespace RotationBall
             _signalBus = signalBus;
         }
 
-        public float speed;
-        public float jumpForce;
+        public Transform ballTransform
+        {
+            get { return playerBallTransform; }
+        }
 
         public GameObject ballObject
         {

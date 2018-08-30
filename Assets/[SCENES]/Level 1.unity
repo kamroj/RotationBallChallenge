@@ -257,7 +257,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _camera: {fileID: 583678427}
-  zoomSpeed: 5.85
+  zoomSpeed1: 0.05
+  zoomSpeed2: 0.01
 --- !u!114 &441772254
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -425,6 +426,11 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 0.06
       objectReference: {fileID: 0}
+    - target: {fileID: 114917827997557110, guid: f6848029f0809be4bb690eb7339f1096,
+        type: 2}
+      propertyPath: playerBallTransform
+      value: 
+      objectReference: {fileID: 1347386848}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f6848029f0809be4bb690eb7339f1096, type: 2}
   m_IsPrefabAsset: 0

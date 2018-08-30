@@ -51,16 +51,15 @@ namespace RotationBall
                         UpdateGameOver();
                         break;
                     }
-                default:
-                    {                        
+                default:                                            
                         break;
-                    }
+                    
             }
         }
 
         void OnBallTouchedCollider()
         {
-            Debug.Log("I hit colider");
+            //Debug.Log("I hit colider");
             _changeSceneByZoom.StartZoomingInTheCamera();
         }
 

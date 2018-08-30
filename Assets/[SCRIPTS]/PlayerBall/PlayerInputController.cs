@@ -66,6 +66,8 @@ namespace RotationBall
         //gdzie to dać
         private void CheckIfGrounded()
         {
+            Debug.Log($"Position of ball is x={playerBall.position.x}, y={playerBall.position.y}");
+
             isGrounded = Physics2D.OverlapBox(new Vector2(playerBall.position.x, playerBall.position.y),
                          new Vector2(playerBall.position.x + pointX, playerBall.position.y - pointY), 0f);
         }

@@ -11,14 +11,8 @@ public class ChangeSceneByZoomView : MonoBehaviour {
     // Use this for initialization
 	void Start () {
         currentCameraSize = _camera.orthographicSize;
-	}
+	}	
 	
-	// Update is called once per frame
-	void Update ()
-    {
-        StartZoomingInTheCamera();        
-    }
-
     public void StartZoomingInTheCamera()
     {
         StartCoroutine(cameraEnumerator());
@@ -30,7 +24,7 @@ public class ChangeSceneByZoomView : MonoBehaviour {
         while (_camera.orthographicSize >= 0.01f)
         {
             yield return new WaitForSeconds(0.001f);
-            _camera.orthographicSize -= 0.01f;
+            _camera.orthographicSize -= 0.1f;
         }
         _camera.orthographicSize = 0.01f;
         

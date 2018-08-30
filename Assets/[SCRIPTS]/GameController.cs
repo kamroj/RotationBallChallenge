@@ -11,6 +11,7 @@ namespace RotationBall
         WaitingToStart,
         Playing,
         GameOver,
+        NextRound
     }
 
     public class GameController : IInitializable, ITickable
@@ -42,13 +43,17 @@ namespace RotationBall
             switch (_state)
             {                
                 case GameStates.Playing:
-                    {
-                        UpdatePlaying();
+                    {                        
                         break;
                     }
                 case GameStates.GameOver:
                     {
                         UpdateGameOver();
+                        break;
+                    }
+                case GameStates.NextRound:
+                    {
+                        UpdatePlaying();
                         break;
                     }
                 default:                                            
@@ -59,8 +64,9 @@ namespace RotationBall
 
         void OnBallTouchedCollider()
         {
+            _state = GameStates.NextRound;
             //Debug.Log("I hit colider");
-            //_changeSceneByZoom.StartZoomingInTheCamera();
+            _changeSceneByZoom.StartZoomingInTheCamera();
         }
 
         void UpdateGameOver()

@@ -10,7 +10,7 @@ public class ChangeSceneByZoomView : MonoBehaviour {
     
     // Use this for initialization
 	void Start () {
-        currentCameraSize = _camera.orthographicSize;
+        currentCameraSize = _camera.orthographicSize;        
 	}	
 	
     public void StartZoomingInTheCamera()

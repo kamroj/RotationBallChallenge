@@ -55,7 +55,7 @@ namespace RotationBall
 
         public void OnCollisionEnter2D(Collision2D collision)
         {
-            if (collision.collider.tag == "deathedge")
+            if (collision.collider.tag == "finalholl")
             {
                 _signalBus.Fire<BallTouchedColliderSignal>();
             }            

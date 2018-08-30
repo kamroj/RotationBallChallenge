@@ -60,7 +60,7 @@ namespace RotationBall
         void OnBallTouchedCollider()
         {
             //Debug.Log("I hit colider");
-            _changeSceneByZoom.StartZoomingInTheCamera();
+            //_changeSceneByZoom.StartZoomingInTheCamera();
         }
 
         void UpdateGameOver()

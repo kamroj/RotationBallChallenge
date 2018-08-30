@@ -15,11 +15,12 @@ namespace RotationBall
         [Header("Adjust parameters")]
         [SerializeField] GameObject envy;
         [SerializeField] Transform playerBall;
+        [SerializeField] LayerMask layerMask;
 
         public float speed;
         public float rotationTime;        
-        public float pointX;
-        public float pointY;
+        public float sizeOfCube;
+        public float cubeYpossiotion;
         public bool isGrounded;
 
 
@@ -66,16 +67,15 @@ namespace RotationBall
         //gdzie to dać
         private void CheckIfGrounded()
         {
-            Debug.Log($"Position of ball is x={playerBall.position.x}, y={playerBall.position.y}");
+            //Debug.Log($"Position of ball is x={playerBall.position.x}, y={playerBall.position.y}");
 
-            isGrounded = Physics2D.OverlapBox(new Vector2(playerBall.position.x, playerBall.position.y),
-                         new Vector2(playerBall.position.x + pointX, playerBall.position.y - pointY), 0f);
+            isGrounded = Physics2D.OverlapBox(new Vector2(playerBall.position.x, playerBall.position.y - cubeYpossiotion), new Vector2(sizeOfCube, sizeOfCube), 0f, layerMask);
         }
 
-        //private void OnDrawGizmos()
-        //{
-        //    Gizmos.color = new Color(0, 1, 0, 0.5f);
-        //    Gizmos.DrawCube(new Vector2(playerBall.position.x - ajdust, playerBall.position.y - ajdust), new Vector2(playerBall.position.x + ajdust, playerBall.position.y + ajdust));
-        //}
+        private void OnDrawGizmos()
+        {
+            Gizmos.color = new Color(0, 1, 0, 0.5f);
+            Gizmos.DrawCube(new Vector2(playerBall.position.x, playerBall.position.y - cubeYpossiotion), new Vector2(sizeOfCube, sizeOfCube));
+        }
     }
 }

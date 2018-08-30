@@ -457,7 +457,7 @@
 -i:"C:/Users/Kamil/Documents/repos/Unity2/RotationBall/Assets/[OTHER PACKAGES]/Spine/spine-unity/SkeletonUtility/SkeletonUtilityConstraint.cs"
 -i:"C:/Users/Kamil/Documents/repos/Unity2/RotationBall/Assets/[OTHER PACKAGES]/Spine/spine-unity/SpineAttributes.cs"
 -i:"C:/Users/Kamil/Documents/repos/Unity2/RotationBall/Assets/[SCRIPTS]/ChangeSceneByZoomView.cs"
--i:"C:/Users/Kamil/Documents/repos/Unity2/RotationBall/Assets/[SCRIPTS]/CheckIfGroundedHandler.cs"
+-i:"C:/Users/Kamil/Documents/repos/Unity2/RotationBall/Assets/[SCRIPTS]/CheckIfObjectIsGrounded.cs"
 -i:"C:/Users/Kamil/Documents/repos/Unity2/RotationBall/Assets/[SCRIPTS]/CoRoutineZenject.cs"
 -i:"C:/Users/Kamil/Documents/repos/Unity2/RotationBall/Assets/[SCRIPTS]/ECS hybrid/Data/EnvyComponents/GlobalRotatorComponents.cs"
 -i:"C:/Users/Kamil/Documents/repos/Unity2/RotationBall/Assets/[SCRIPTS]/ECS hybrid/Systems/EnvySystems/GlobalRotationSystem.cs"

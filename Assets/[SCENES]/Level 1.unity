@@ -189,8 +189,8 @@ GameObject:
   - component: {fileID: 441772252}
   - component: {fileID: 441772251}
   - component: {fileID: 441772250}
-  - component: {fileID: 441772254}
   - component: {fileID: 441772253}
+  - component: {fileID: 441772254}
   m_Layer: 0
   m_Name: SceneContext
   m_TagString: Untagged
@@ -210,8 +210,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ball: {fileID: 1411654322}
-  playerInputController: {fileID: 441772254}
+  playerInputController: {fileID: 1411654326}
   camera: {fileID: 441772253}
+  objectToCheck: {fileID: 0}
 --- !u!114 &441772251
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -265,16 +266,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 441772249}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a16642fc0fbdea24dbf345a08544b7d6, type: 3}
+  m_Script: {fileID: 11500000, guid: 3bd3d713014e7df43a2ea3f608354f5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  envy: {fileID: 1217686672}
-  playerBall: {fileID: 1347386848}
-  speed: 1
-  rotationTime: 1
-  pointX: 0
-  pointY: 0
+  objectToCheck: {fileID: 1347386848}
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 256
   isGrounded: 0
+  sizeOfCube: 0.22
+  cubeYpossiotion: 0.06
 --- !u!1 &583678425
 GameObject:
   m_ObjectHideFlags: 0
@@ -513,6 +514,24 @@ CircleCollider2D:
   m_CorrespondingSourceObject: {fileID: 58977286587863180, guid: f6848029f0809be4bb690eb7339f1096,
     type: 2}
   m_PrefabInternal: {fileID: 620337611}
+--- !u!114 &1411654326
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1411654321}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a16642fc0fbdea24dbf345a08544b7d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  envy: {fileID: 1217686672}
+  playerBall: {fileID: 1347386848}
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 256
+  speed: 1
+  rotationTime: 1
 --- !u!1001 &1619565460
 Prefab:
   m_ObjectHideFlags: 0
@@ -661,6 +680,18 @@ Prefab:
     - target: {fileID: 4487096578078072, guid: 59a6bafeb6453a74bbdb3bc8202d8969, type: 2}
       propertyPath: m_LocalScale.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1731792431525528, guid: 59a6bafeb6453a74bbdb3bc8202d8969, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1983970383826972, guid: 59a6bafeb6453a74bbdb3bc8202d8969, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1879473075657914, guid: 59a6bafeb6453a74bbdb3bc8202d8969, type: 2}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 59a6bafeb6453a74bbdb3bc8202d8969, type: 2}

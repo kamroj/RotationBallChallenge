@@ -19,9 +19,9 @@ namespace RotationBall
 
         public float speed;
         public float rotationTime;        
-        public float sizeOfCube;
-        public float cubeYpossiotion;
-        public bool isGrounded;
+        //public float sizeOfCube;
+        //public float cubeYpossiotion;
+        //public bool isGrounded;
 
 
         [Inject]
@@ -33,7 +33,7 @@ namespace RotationBall
 
         private void Update()
         {
-            CheckIfGrounded();
+            //CheckIfGrounded();
             TryRotate();
             movementHandler.TryMove();
             TryJump();
@@ -64,18 +64,18 @@ namespace RotationBall
         }
 
 
-        //gdzie to dać
-        private void CheckIfGrounded()
-        {
-            //Debug.Log($"Position of ball is x={playerBall.position.x}, y={playerBall.position.y}");
+        ////gdzie to dać
+        //private void CheckIfGrounded()
+        //{
+        //    //Debug.Log($"Position of ball is x={playerBall.position.x}, y={playerBall.position.y}");
 
-            isGrounded = Physics2D.OverlapBox(new Vector2(playerBall.position.x, playerBall.position.y - cubeYpossiotion), new Vector2(sizeOfCube, sizeOfCube), 0f, layerMask);
-        }
+        //    isGrounded = Physics2D.OverlapBox(new Vector2(playerBall.position.x, playerBall.position.y - cubeYpossiotion), new Vector2(sizeOfCube, sizeOfCube), 0f, layerMask);
+        //}
 
-        private void OnDrawGizmos()
-        {
-            Gizmos.color = new Color(0, 1, 0, 0.5f);
-            Gizmos.DrawCube(new Vector2(playerBall.position.x, playerBall.position.y - cubeYpossiotion), new Vector2(sizeOfCube, sizeOfCube));
-        }
+        //private void OnDrawGizmos()
+        //{
+        //    Gizmos.color = new Color(0, 1, 0, 0.5f);
+        //    Gizmos.DrawCube(new Vector2(playerBall.position.x, playerBall.position.y - cubeYpossiotion), new Vector2(sizeOfCube, sizeOfCube));
+        //}
     }
 }

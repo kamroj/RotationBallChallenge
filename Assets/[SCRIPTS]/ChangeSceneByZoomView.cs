@@ -7,24 +7,25 @@ namespace RotationBall
     public class ChangeSceneByZoomView : MonoBehaviour {
 
         [SerializeField] Camera _camera;
-        [Zenject.Inject] BallComponents ballComponents;
+        [SerializeField] Transform finalHollTransform;
 
-        public float zoomSpeed1;
-        public float zoomSpeed2;
+        [SerializeField] float zoomSpeed1;
+        [SerializeField] float zoomSpeed2;
+        [SerializeField] float waitingTime = 1f;
         private float currentCameraSize;
-        Vector2 currBallPosition;
+        Vector2 currHolePosition;
         Vector2 currCameraPosition;
 
         // Use this for initialization
-        void Start() {
+        void Start()
+        {
             currentCameraSize = _camera.orthographicSize;
-            currCameraPosition = _camera.transform.position;            
-            
+            currCameraPosition = _camera.transform.position;
         }
 
         private void Update()
         {
-            currBallPosition = ballComponents.ballTransform.position;            
+            currHolePosition = finalHollTransform.transform.position;
         }
 
         public void StartZoomingInTheCamera()
@@ -35,7 +36,7 @@ namespace RotationBall
 
         IEnumerator cameraEnumerator()
         {
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(waitingTime);
             while (_camera.orthographicSize >= 0.01f)
             {
                 yield return new WaitForSeconds(0.001f);
@@ -46,11 +47,11 @@ namespace RotationBall
 
         IEnumerator cameraEnumeratorToPlayer()
         {
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(waitingTime);
             Debug.Log("UWAGA");
             for (var t = 0f; t < 1; t += zoomSpeed2)
             {                
-                _camera.transform.position = Vector2.Lerp(currCameraPosition, currBallPosition, t);
+                _camera.transform.position = Vector2.Lerp(currCameraPosition, currHolePosition, t);
                 yield return null;
             }            
         }

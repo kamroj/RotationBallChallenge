@@ -10,6 +10,7 @@ namespace RotationBall
 
         EnvyRotationHandler rotationHandler;
         PlayerMovementHandler movementHandler;
+        ParticleComponentList particleSystem;
 
 
         [Header("Adjust parameters")]
@@ -25,10 +26,11 @@ namespace RotationBall
 
 
         [Inject]
-        private void Initialize(EnvyRotationHandler _rotationHandler, PlayerMovementHandler _movementHandler)
+        private void Initialize(EnvyRotationHandler _rotationHandler, PlayerMovementHandler _movementHandler, ParticleComponentList _particleSystem)
         {
             rotationHandler = _rotationHandler;
             movementHandler = _movementHandler;
+            particleSystem = _particleSystem;
         }
 
         private void Update()
@@ -60,6 +62,7 @@ namespace RotationBall
             if (Input.GetKeyDown(KeyCode.W))
             {
                 movementHandler.TryJump();
+                particleSystem.PlayJumpingParticles();
             }
         }
 

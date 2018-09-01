@@ -8,10 +8,12 @@ public class MainInstaller : MonoInstaller<MainInstaller>
     [SerializeField] PlayerInputController playerInputController;
     [SerializeField] ChangeSceneByZoomView camera;
     [SerializeField] CheckIfObjectIsGrounded checkIfObjectIsGrounded;
+    [SerializeField] ParticleComponentList jumpingParticles;
 
     public override void InstallBindings()
     {
         Container.Bind<BallComponents>().FromInstance(ball).AsSingle();
+        Container.Bind<ParticleComponentList>().FromInstance(jumpingParticles).AsSingle();
         Container.Bind<CheckIfObjectIsGrounded>().FromInstance(checkIfObjectIsGrounded).AsSingle();
         Container.Bind<ChangeSceneByZoomView>().FromInstance(camera).AsSingle();
         Container.BindInterfacesAndSelfTo<GameController>().AsSingle();

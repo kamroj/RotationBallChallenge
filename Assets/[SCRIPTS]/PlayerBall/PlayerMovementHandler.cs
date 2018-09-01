@@ -28,7 +28,7 @@ namespace RotationBall
 
         public void TryJump()
         {
-            if (ballComponents.BallStateMain == BallPositionEnum.Jumping && ballComponents.Rigidbody2D.velocity.y == 0f)
+            if (ballComponents.BallStateMain == BallPositionEnum.Jumping && ballComponents.Rigidbody2D.velocity.y != 0f)
             {
                 return;
             }

@@ -9,5 +9,6 @@ public class InstallerUI : MonoInstaller<InstallerUI>
     public override void InstallBindings()
     {
         Container.Bind<ButtonsCompoments>().FromInstance(buttonsCompoments).AsSingle();
+        Container.BindInterfacesAndSelfTo<ButtonsView>().AsSingle();
     }
 }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Zenject;
+using RotationBall.LevelChange;
 
 namespace RotationBall.UI
 {
@@ -9,6 +10,7 @@ namespace RotationBall.UI
     {
         [Zenject.Inject] ButtonsCompoments button;
         [Zenject.Inject] ButtonsView buttonsView;
+        [Zenject.Inject] LevelChanger levelChanger;
 
         private void GoToSelectLevelView()
         {
@@ -23,6 +25,14 @@ namespace RotationBall.UI
         private void StartGame()
         {
             button.startButton.onClick.Invoke();
+        }
+
+        private void ChooseLevelFromSelectLevelMenu()
+        {            
+            for (int i = 0; i < button.LevelButton.Count; i++)
+            {
+                button.LevelButton[i].onClick.Invoke();
+            }
         }
     }
 }

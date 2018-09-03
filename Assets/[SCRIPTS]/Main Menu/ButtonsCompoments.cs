@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using System.Collections.Generic;
 using Zenject;
 
 namespace RotationBall.UI
@@ -13,6 +14,6 @@ namespace RotationBall.UI
         [SerializeField] public Button backButton;
         [SerializeField] public Button exitButton;
 
-        [SerializeField] public Button[] LevelButton;
+        [SerializeField] public List <Button> LevelButton;
     }
 }

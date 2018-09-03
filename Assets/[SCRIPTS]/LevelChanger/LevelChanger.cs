@@ -1,11 +1,12 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
-namespace LevelChanger
+namespace RotationBall.LevelChange
 {
     public class LevelChanger : MonoBehaviour
     {
         public Animator animator;
+
         private int levelToLoad;              
 
         public void FadeToLevel(int levelIndex)
@@ -15,8 +16,9 @@ namespace LevelChanger
         }
         
         public void OnFadeComplete()
-        {
+        {            
             SceneManager.LoadScene(levelToLoad);
+            animator.SetTrigger("FadeIn");
         }
     }
 }

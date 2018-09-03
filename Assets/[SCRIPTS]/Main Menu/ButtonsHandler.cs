@@ -19,5 +19,10 @@ namespace RotationBall.UI
         {
             button.backButton.onClick.Invoke();
         }
+
+        private void StartGame()
+        {
+            button.startButton.onClick.Invoke();
+        }
     }
 }

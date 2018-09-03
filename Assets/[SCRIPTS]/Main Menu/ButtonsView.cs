@@ -1,15 +1,17 @@
 ﻿using UnityEngine;
 using UnityEngine.Events;
 using Zenject;
-using UnityEngine.SceneManagement;
+using RotationBall.LevelChange;
 
 namespace RotationBall.UI
 {
     public class ButtonsView : IInitializable
     {
         [Zenject.Inject] ButtonsCompoments button;
+        [Zenject.Inject] LevelChanger levelChanger;
 
         public UnityEvent selectButton;
+        private int levelReached;
 
 
         public void Initialize()
@@ -27,7 +29,7 @@ namespace RotationBall.UI
 
         private void UnlockLevel()
         {
-            int levelReached = PlayerPrefs.GetInt("levelReached", 1);
+            levelReached = PlayerPrefs.GetInt("levelReached", 1);
 
             for (int i = 0; i < button.LevelButton.Length; i++)
             {
@@ -52,7 +54,7 @@ namespace RotationBall.UI
 
         void StartGame()
         {
-            
+            levelChanger.FadeToLevel(1);
         }
 
     }

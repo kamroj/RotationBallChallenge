@@ -468,6 +468,7 @@
 -i:"C:/Users/Kamil/Documents/repos/Unity2/RotationBall/Assets/[SCRIPTS]/Installers/InstallerUI.cs"
 -i:"C:/Users/Kamil/Documents/repos/Unity2/RotationBall/Assets/[SCRIPTS]/Installers/MainInstaller.cs"
 -i:"C:/Users/Kamil/Documents/repos/Unity2/RotationBall/Assets/[SCRIPTS]/LevelChanger/LevelChanger.cs"
+-i:"C:/Users/Kamil/Documents/repos/Unity2/RotationBall/Assets/[SCRIPTS]/Main Menu/BackToMenuButton.cs"
 -i:"C:/Users/Kamil/Documents/repos/Unity2/RotationBall/Assets/[SCRIPTS]/Main Menu/ButtonsCompoments.cs"
 -i:"C:/Users/Kamil/Documents/repos/Unity2/RotationBall/Assets/[SCRIPTS]/Main Menu/ButtonsHandler.cs"
 -i:"C:/Users/Kamil/Documents/repos/Unity2/RotationBall/Assets/[SCRIPTS]/Main Menu/ButtonsView.cs"

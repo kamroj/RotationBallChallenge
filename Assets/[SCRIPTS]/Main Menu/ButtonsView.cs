@@ -9,9 +9,9 @@ namespace RotationBall.UI
     {
         [Zenject.Inject] ButtonsCompoments button;
         [Zenject.Inject] LevelChanger levelChanger;
+        [Zenject.Inject] GameController gameController;
 
-        public UnityEvent selectButton;
-        private int levelReached;
+        public UnityEvent selectButton;        
 
 
         public void Initialize()
@@ -29,11 +29,11 @@ namespace RotationBall.UI
 
         private void UnlockLevel()
         {
-            levelReached = PlayerPrefs.GetInt("levelReached", 1);
+            gameController.levelUnlocked = PlayerPrefs.GetInt("levelReached", gameController.levelReached);
 
             for (int i = 0; i < button.LevelButton.Length; i++)
             {
-                if (i + 1 > levelReached)
+                if (i + 1 > gameController.levelUnlocked)
                 {
                     button.LevelButton[i].interactable = false;
                 }

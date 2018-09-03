@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using Zenject;
 using RotationBall.LevelChange;
+using RotationBall.UI;
 using ModestTree;
 
 namespace RotationBall
@@ -17,7 +18,10 @@ namespace RotationBall
     public class GameController : ITickable
     {
         [Zenject.Inject] LevelChanger levelChanger;
-        
+
+        public int levelReached = 1;
+        public int levelUnlocked;
+
         //SignalBus _signalBus;
         //ChangeSceneByZoomView _changeSceneByZoom;
         public GameStates gameState;
@@ -73,11 +77,11 @@ namespace RotationBall
         }
 
         void UpdateNextRound()
-        {
+        {            
             gameState = GameStates.Playing;
+            levelReached += 1;
             Debug.Log("ShouldChange");
-            levelChanger.ChangeToLevel(1);            
-        }
-        
+            levelChanger.ChangeToLevel(levelReached);            
+        }        
     }
 }

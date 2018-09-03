@@ -1,7 +1,7 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using Zenject;
+using RotationBall.LevelChange;
+using ModestTree;
 
 namespace RotationBall
 {
@@ -14,36 +14,34 @@ namespace RotationBall
         NextRound
     }
 
-    public class GameController : IInitializable, ITickable
+    public class GameController : ITickable
     {
-        BallComponents _ballComponents;
-        SignalBus _signalBus;
-        ChangeSceneByZoomView _changeSceneByZoom;
-        GameStates _state = GameStates.Playing;
+        [Zenject.Inject] LevelChanger levelChanger;
+        
+        //SignalBus _signalBus;
+        //ChangeSceneByZoomView _changeSceneByZoom;
+        public GameStates gameState;
+               
 
-        public GameStates State
-        {
-            get { return _state; }
-        }
+        //public GameController(SignalBus signalBus, ChangeSceneByZoomView changeSceneByZoom)
+        //{
+            
+        //    _signalBus = signalBus;
+        //    _changeSceneByZoom = changeSceneByZoom;
+        //}
 
-        public GameController(BallComponents ballComponents, SignalBus signalBus, ChangeSceneByZoomView changeSceneByZoom)
-        {
-            _ballComponents = ballComponents;
-            _signalBus = signalBus;
-            _changeSceneByZoom = changeSceneByZoom;
-        }
-
-        public void Initialize()
-        {
-            _signalBus.Subscribe<BallTouchedColliderSignal>(OnBallTouchedCollider);
-        }
+        //public void Initialize()
+        //{
+        //    _signalBus.Subscribe<BallTouchedColliderSignal>(OnBallTouchedCollider);            
+        //}
 
         public void Tick()
-        {
-            switch (_state)
+        {            
+            switch (gameState)
             {                
                 case GameStates.Playing:
-                    {                        
+                    {
+                        UpdateGameOver();
                         break;
                     }
                 case GameStates.GameOver:
@@ -53,7 +51,7 @@ namespace RotationBall
                     }
                 case GameStates.NextRound:
                     {
-                        UpdatePlaying();
+                        UpdateNextRound();
                         break;
                     }
                 default:                                            
@@ -62,24 +60,23 @@ namespace RotationBall
             }
         }
 
-        void OnBallTouchedCollider()
+        public void ChangeGameState(GameStates gameStates)
         {
-            _state = GameStates.NextRound;
-            //Debug.Log("I hit colider");
-            _changeSceneByZoom.StartZoomingInTheCamera();
+            gameState = gameStates;
         }
+        
 
         void UpdateGameOver()
         {
+            
             Debug.Log("Update gameover is fired");
         }
 
-        void UpdatePlaying()
+        void UpdateNextRound()
         {
-            if (Input.GetKeyDown(KeyCode.N))
-            {
-                Debug.Log("Update playing is fired");
-            }            
+            gameState = GameStates.Playing;
+            Debug.Log("ShouldChange");
+            levelChanger.ChangeToLevel(1);            
         }
         
     }

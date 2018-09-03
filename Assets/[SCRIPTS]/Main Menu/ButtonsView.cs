@@ -54,7 +54,7 @@ namespace RotationBall.UI
 
         void StartGame()
         {
-            levelChanger.FadeToLevel(1);
+            levelChanger.ChangeToLevel(1);
         }
 
     }

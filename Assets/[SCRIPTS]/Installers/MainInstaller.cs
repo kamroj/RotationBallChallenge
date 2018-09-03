@@ -1,6 +1,7 @@
 using UnityEngine;
 using Zenject;
 using RotationBall;
+using RotationBall.LevelChange;
 
 public class MainInstaller : MonoInstaller<MainInstaller>
 {
@@ -16,10 +17,13 @@ public class MainInstaller : MonoInstaller<MainInstaller>
         Container.Bind<ParticleComponentList>().FromInstance(jumpingParticles).AsSingle();
         Container.Bind<CheckIfObjectIsGrounded>().FromInstance(checkIfObjectIsGrounded).AsSingle();
         Container.Bind<ChangeSceneByZoomView>().FromInstance(camera).AsSingle();
-        Container.BindInterfacesAndSelfTo<GameController>().AsSingle();
+        //Container.BindInterfacesAndSelfTo<GameController>().AsSingle();
         Container.Bind<PlayerInputController>().FromInstance(playerInputController).AsSingle();
         Container.Bind<EnvyRotationHandler>().AsSingle();
         Container.Bind<PlayerMovementHandler>().AsCached();
+
+        Container.BindInterfacesAndSelfTo<Hole>().AsSingle();
+        
 
         SignalBusInstaller.Install(Container);
         Container.DeclareSignal<BallTouchedColliderSignal>();

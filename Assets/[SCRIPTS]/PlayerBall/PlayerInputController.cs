@@ -10,7 +10,7 @@ namespace RotationBall
 
         EnvyRotationHandler rotationHandler;
         PlayerMovementHandler movementHandler;
-        ParticleComponentList particleSystem;
+        ParticleComponentList particleSystem;        
 
 
         [Header("Adjust parameters")]
@@ -62,7 +62,7 @@ namespace RotationBall
             if (Input.GetKeyDown(KeyCode.W))
             {
                 movementHandler.TryJump();
-                particleSystem.PlayJumpingParticles();
+                particleSystem.PlayJumpingParticles();                
             }
         }
 

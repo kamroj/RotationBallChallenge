@@ -1,6 +1,6 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using Zenject;
 
 namespace RotationBall
 {
@@ -8,10 +8,14 @@ namespace RotationBall
 
         [SerializeField] Camera _camera;
         [SerializeField] Transform finalHollTransform;
+        //[Zenject.Inject] GameController a;
+
+        
 
         [SerializeField] float zoomSpeed1;
         [SerializeField] float zoomSpeed2;
         [SerializeField] float waitingTime = 1f;
+
         private float currentCameraSize;
         Vector2 currHolePosition;
         Vector2 currCameraPosition;
@@ -40,9 +44,10 @@ namespace RotationBall
             while (_camera.orthographicSize >= 0.01f)
             {
                 yield return new WaitForSeconds(0.001f);
-                _camera.orthographicSize -= zoomSpeed1;
+                _camera.orthographicSize -= zoomSpeed1;                
             }
-            _camera.orthographicSize = 0.01f;                  
+            _camera.orthographicSize = 0.01f;            
+
         }
 
         IEnumerator cameraEnumeratorToPlayer()

@@ -17,7 +17,7 @@ namespace RotationBall
 
     public class GameController : ITickable
     {
-        [Zenject.Inject] LevelChanger levelChanger;
+        [Zenject.Inject] LevelChanger levelChanger;        
 
         public int levelReached = 1;
         public int levelUnlocked;

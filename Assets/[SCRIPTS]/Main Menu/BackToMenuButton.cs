@@ -4,21 +4,26 @@ using RotationBall.LevelChange;
 using RotationBall;
 using Zenject;
 
-public class BackToMenuButton : MonoBehaviour
+namespace RotationBall.UI
 {
-    [SerializeField] Button mainMenuButton;
-    [Zenject.Inject] LevelChanger levelChanger;
-    [Zenject.Inject] GameController gameController;
-
-	
-    public void Start()
+    public class BackToMenuButton : MonoBehaviour
     {
-        mainMenuButton.onClick.AddListener(GoBackToMainMenu);
-    }	
+        [SerializeField] Button mainMenuButton;
+        [Zenject.Inject] LevelChanger levelChanger;
+        [Zenject.Inject] GameController gameController;
 
-    private void GoBackToMainMenu()
-    {
-        gameController.ChangeGameState(GameStates.Playing);
-        levelChanger.ChangeToLevel(0);
+
+        public void Start()
+        {
+            DontDestroyOnLoad(this);
+            mainMenuButton.onClick.AddListener(GoBackToMainMenu);
+        }
+
+        public void GoBackToMainMenu()
+        {
+            Debug.Log("I was pressed");
+            gameController.ChangeGameState(GameStates.Playing);
+            levelChanger.ChangeToLevel(0);
+        }
     }
 }

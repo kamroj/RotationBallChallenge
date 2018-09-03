@@ -80,5 +80,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelChanger: {fileID: 1634592488355148, guid: 5434149bdd7341142a4a3b49e3d3e525,
     type: 2}
-  mainMenuButton: {fileID: 1634592488355148, guid: 5434149bdd7341142a4a3b49e3d3e525,
+  mainMenuButton: {fileID: 1611226047622606, guid: 3560f3f77956cf8439ec12026a62e0ab,
     type: 2}

@@ -17,7 +17,7 @@ public class GlobalInstaller : MonoInstaller<GlobalInstaller>
         Container.BindInterfacesAndSelfTo<GameController>().AsSingle();        
 
         Container.Bind<LevelChanger>().FromComponentInNewPrefab(levelChanger).AsSingle();
-        Container.Bind<BackToMenuButton>().FromComponentInNewPrefab(mainMenuButton).AsSingle();
+        Container.InstantiatePrefab(mainMenuButton);
 
     }
 }

@@ -12,9 +12,9 @@ namespace RotationBall
         [SerializeField] Transform playerBallTransform = null;
         [SerializeField] BallPositionEnum _ballStateMain;        
 
-        SignalBus _signalBus;
+        SignalBus _signalBus;       
         public float speed;
-        public float jumpForce;
+        public float jumpForce;        
 
         [Inject]
         public void Contr(SignalBus signalBus)

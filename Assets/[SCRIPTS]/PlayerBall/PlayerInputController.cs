@@ -33,7 +33,7 @@ namespace RotationBall
             particleSystem = _particleSystem;
         }
 
-        private void FixedUpdate()
+        private void Update()
         {
             //CheckIfGrounded();
             TryRotate();
@@ -58,7 +58,7 @@ namespace RotationBall
         }
 
         private void TryJump()
-        {
+        {           
             if (Input.GetKeyDown(KeyCode.W))
             {
                 movementHandler.TryJump();

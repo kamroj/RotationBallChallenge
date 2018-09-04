@@ -6203,7 +6203,7 @@ MonoBehaviour:
   _playerBall: {fileID: 1236565137}
   playerBallTransform: {fileID: 1347386848}
   _ballStateMain: 0
-  speed: 200
+  speed: 400
   jumpForce: 200
 --- !u!114 &1411654326
 MonoBehaviour:

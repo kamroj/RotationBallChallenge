@@ -14,6 +14,7 @@ namespace RotationBall
 
         private float acceleration;
         private float jumpForce;
+        private bool canJump;
 
         public PlayerMovementHandler(BallComponents _ballComponents, CheckIfObjectIsGrounded _checkIfObjectIsGrounded)
         {
@@ -29,12 +30,8 @@ namespace RotationBall
         }
 
         public void TryJump()
-        {
-            if (ballComponents.BallStateMain == BallPositionEnum.Jumping && ballComponents.Rigidbody2D.velocity.y != 0f)
-            {
-                return;
-            }
-            else if (ballComponents.BallStateMain == BallPositionEnum.Grounded)
+        {            
+            if (ballComponents.BallStateMain != BallPositionEnum.Jumping)
             {
                 ballComponents.BallStateMain = BallPositionEnum.Jumping;
                 jumpForce = ballComponents.jumpForce * Time.deltaTime * 100f;

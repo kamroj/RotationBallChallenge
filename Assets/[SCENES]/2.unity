@@ -576,11 +576,6 @@ Prefab:
       propertyPath: envy
       value: 
       objectReference: {fileID: 1217686672}
-    - target: {fileID: 212174752862730502, guid: f6848029f0809be4bb690eb7339f1096,
-        type: 2}
-      propertyPath: m_SortingOrder
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f6848029f0809be4bb690eb7339f1096, type: 2}
   m_IsPrefabAsset: 0

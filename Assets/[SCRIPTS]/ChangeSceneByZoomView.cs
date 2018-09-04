@@ -8,6 +8,8 @@ namespace RotationBall
 
         [SerializeField] Camera _camera;
         [SerializeField] Transform finalHollTransform;
+
+        [Zenject.Inject] BallComponents ball;
         [Zenject.Inject] GameController gameController;
 
         
@@ -15,9 +17,11 @@ namespace RotationBall
         [SerializeField] float zoomSpeed1;
         [SerializeField] float zoomSpeed2;
         [SerializeField] float waitingTime = 1f;
+        [SerializeField] float ballToHoleSpeed = 0.04f;
 
         private float currentCameraSize;
         Vector2 currHolePosition;
+        Vector2 currballPosition;
         Vector2 currCameraPosition;
 
         // Use this for initialization
@@ -29,6 +33,7 @@ namespace RotationBall
 
         private void Update()
         {
+            currballPosition = ball.transform.position;
             currHolePosition = finalHollTransform.transform.position;
         }
 
@@ -36,6 +41,7 @@ namespace RotationBall
         {
             StartCoroutine(cameraEnumerator());            
             StartCoroutine(cameraEnumeratorToPlayer());
+            StartCoroutine(ballToHolePosition());
         }
 
         IEnumerator cameraEnumerator()
@@ -60,6 +66,16 @@ namespace RotationBall
                 _camera.transform.position = Vector2.Lerp(currCameraPosition, currHolePosition, t);
                 yield return null;
             }            
+        }
+
+        IEnumerator ballToHolePosition()
+        {            
+            Debug.Log("UWAGA");
+            for (var t = 0f; t < 1; t += ballToHoleSpeed)
+            {
+                ball.transform.position = Vector2.Lerp(currballPosition, currHolePosition, t);
+                yield return null;
+            }
         }
     }
 }

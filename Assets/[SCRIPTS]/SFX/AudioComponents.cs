@@ -7,9 +7,10 @@ namespace RotationBall.Audio
     public class AudioComponents : MonoBehaviour
     {
         [SerializeField] AudioClip _jumpClip;
-        //[SerializeField] AudioSource _audioSource;
+        [SerializeField] AudioClip _music;
 
         public AudioClip jumpClip { get { return _jumpClip; } }
-        //public AudioSource audioSource { get { return _audioSource; } }
+        public AudioClip music { get { return _music; } }
+
     }
 }

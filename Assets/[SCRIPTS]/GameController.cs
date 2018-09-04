@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using Zenject;
 using RotationBall.LevelChange;
+using RotationBall.Audio;
 using RotationBall.UI;
 using ModestTree;
 
@@ -15,9 +16,11 @@ namespace RotationBall
         NextRound
     }
 
-    public class GameController : ITickable
+    public class GameController : IInitializable, ITickable
     {
-        [Zenject.Inject] LevelChanger levelChanger;        
+        [Zenject.Inject] LevelChanger levelChanger;
+        [Zenject.Inject] AudioMenager audioMenager;
+        [Zenject.Inject] AudioComponents audio;
 
         public int levelReached = 1;
         public int levelUnlocked;
@@ -101,7 +104,12 @@ namespace RotationBall
 
         private void WaitingForStart()
         {
-            Debug.Log("I am waiting for start");
+            
+        }
+
+        public void Initialize()
+        {
+            audioMenager.Play(audio.music);
         }
     }
 }

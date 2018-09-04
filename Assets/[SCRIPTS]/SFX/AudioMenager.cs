@@ -11,5 +11,13 @@ namespace RotationBall.Audio
         {
             audioSource.PlayOneShot(audioClip);   
         }
+
+        public void Play(AudioClip audio)
+        {
+            audioSource.clip = audio;
+            audioSource.loop = true;
+            audioSource.Play();
+        }
+
     }
 }

@@ -6,6 +6,7 @@ public class Hole : IInitializable
 {
     [Zenject.Inject] SignalBus signalBus;
     [Zenject.Inject] GameController gameController;
+    [Zenject.Inject] ChangeSceneByZoomView changeSceneByZoomView;
 
     public void Initialize()
     {
@@ -16,7 +17,6 @@ public class Hole : IInitializable
     {
         //_changeSceneByZoom.StartZoomingInTheCamera();
         Debug.Log("I hit the hole");
-        gameController.gameState = GameStates.NextRound;
-
+        changeSceneByZoomView.StartZoomingInTheCamera();
     }
 }

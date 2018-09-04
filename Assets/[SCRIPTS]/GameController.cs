@@ -21,10 +21,11 @@ namespace RotationBall
 
         public int levelReached = 1;
         public int levelUnlocked;
+        public int nextLevelToLoad = 1;
 
         //SignalBus _signalBus;
         //ChangeSceneByZoomView _changeSceneByZoom;
-        public GameStates gameState;
+        public GameStates gameState = GameStates.WaitingToStart;
                
 
         //public GameController(SignalBus signalBus, ChangeSceneByZoomView changeSceneByZoom)
@@ -42,10 +43,15 @@ namespace RotationBall
         public void Tick()
         {            
             switch (gameState)
-            {                
+            {
+                case GameStates.WaitingToStart:
+                    {
+                        WaitingForStart();
+                        break;
+                    }
                 case GameStates.Playing:
                     {
-                        UpdateGameOver();
+                        GameIsInPlayMode();
                         break;
                     }
                 case GameStates.GameOver:
@@ -70,18 +76,32 @@ namespace RotationBall
         }
         
 
-        void UpdateGameOver()
+        private void UpdateGameOver()
         {
             
             Debug.Log("Update gameover is fired");
         }
 
-        void UpdateNextRound()
-        {            
+        private void UpdateNextRound()
+        {
             gameState = GameStates.Playing;
-            levelReached += 1;
+            if (nextLevelToLoad == levelReached)
+            {
+                levelReached += 1;
+            }
+            nextLevelToLoad += 1;
             Debug.Log("ShouldChange");
-            levelChanger.ChangeToLevel(levelReached);            
-        }        
+            levelChanger.ChangeToLevel(nextLevelToLoad);
+        }
+
+        private void GameIsInPlayMode()
+        {
+            Debug.Log("Playing!!");
+        }
+
+        private void WaitingForStart()
+        {
+            Debug.Log("I am waiting for start");
+        }
     }
 }

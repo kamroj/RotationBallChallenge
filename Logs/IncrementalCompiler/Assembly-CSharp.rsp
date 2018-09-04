@@ -472,6 +472,7 @@
 -i:"C:/Users/Kamil/Documents/repos/Unity2/RotationBall/Assets/[SCRIPTS]/Main Menu/ButtonsCompoments.cs"
 -i:"C:/Users/Kamil/Documents/repos/Unity2/RotationBall/Assets/[SCRIPTS]/Main Menu/ButtonsHandler.cs"
 -i:"C:/Users/Kamil/Documents/repos/Unity2/RotationBall/Assets/[SCRIPTS]/Main Menu/ButtonsView.cs"
+-i:"C:/Users/Kamil/Documents/repos/Unity2/RotationBall/Assets/[SCRIPTS]/MonoCoroutine.cs"
 -i:"C:/Users/Kamil/Documents/repos/Unity2/RotationBall/Assets/[SCRIPTS]/ParticleSystem/ParticleComponentList.cs"
 -i:"C:/Users/Kamil/Documents/repos/Unity2/RotationBall/Assets/[SCRIPTS]/PlayerBall/BallComponents.cs"
 -i:"C:/Users/Kamil/Documents/repos/Unity2/RotationBall/Assets/[SCRIPTS]/PlayerBall/BallStateDead.cs"

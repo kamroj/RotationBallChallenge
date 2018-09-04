@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using RotationBall.LevelChange;
+using System.Collections;
 using RotationBall;
 using Zenject;
 
@@ -15,15 +16,22 @@ namespace RotationBall.UI
 
         public void Start()
         {
-            DontDestroyOnLoad(this);
-            mainMenuButton.onClick.AddListener(GoBackToMainMenu);
+            DontDestroyOnLoad(this);                      
         }
+        
 
         public void GoBackToMainMenu()
         {
             Debug.Log("I was pressed");
-            gameController.ChangeGameState(GameStates.Playing);
+            gameController.ChangeGameState(GameStates.WaitingToStart);
             levelChanger.ChangeToLevel(0);
+            StartCoroutine(waitTillFadeOut());
+        }     
+
+        IEnumerator waitTillFadeOut()
+        {
+            yield return new WaitForSeconds(1f);
+            gameObject.SetActive(false);
         }
     }
 }

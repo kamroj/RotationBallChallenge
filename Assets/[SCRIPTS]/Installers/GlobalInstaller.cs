@@ -9,6 +9,7 @@ public class GlobalInstaller : MonoInstaller<GlobalInstaller>
 {
     [SerializeField] GameObject levelChanger;
     [SerializeField] GameObject mainMenuButton;
+    [SerializeField] MonoCoroutine monoCoroutine;
 
     public override void InstallBindings()
     {
@@ -17,7 +18,10 @@ public class GlobalInstaller : MonoInstaller<GlobalInstaller>
         Container.BindInterfacesAndSelfTo<GameController>().AsSingle();        
 
         Container.Bind<LevelChanger>().FromComponentInNewPrefab(levelChanger).AsSingle();
-        Container.InstantiatePrefab(mainMenuButton);
+        //Container.InstantiatePrefab(mainMenuButton);     
+        Container.Bind<BackToMenuButton>().FromComponentInNewPrefab(mainMenuButton).AsSingle();
+        Container.Bind<MonoCoroutine>().FromInstance(monoCoroutine).AsSingle();
+        
 
     }
 }

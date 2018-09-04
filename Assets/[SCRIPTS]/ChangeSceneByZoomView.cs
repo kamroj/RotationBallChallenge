@@ -8,7 +8,7 @@ namespace RotationBall
 
         [SerializeField] Camera _camera;
         [SerializeField] Transform finalHollTransform;
-        //[Zenject.Inject] GameController a;
+        [Zenject.Inject] GameController gameController;
 
         
 
@@ -46,7 +46,8 @@ namespace RotationBall
                 yield return new WaitForSeconds(0.001f);
                 _camera.orthographicSize -= zoomSpeed1;                
             }
-            _camera.orthographicSize = 0.01f;            
+            _camera.orthographicSize = 0.01f;
+            gameController.gameState = GameStates.NextRound;
 
         }
 

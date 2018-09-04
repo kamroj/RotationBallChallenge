@@ -7,8 +7,8 @@ public class InstallerUI : MonoInstaller<InstallerUI>
 {
     [SerializeField] ButtonsCompoments buttonsCompoments;    
 
-    public override void InstallBindings()    {
-        
+    public override void InstallBindings()
+    {        
         Container.Bind<ButtonsCompoments>().FromInstance(buttonsCompoments).AsSingle();
         Container.BindInterfacesAndSelfTo<ButtonsView>().AsSingle();
     }

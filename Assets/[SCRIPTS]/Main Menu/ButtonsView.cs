@@ -3,22 +3,29 @@ using UnityEngine.Events;
 using UnityEngine.EventSystems;
 using Zenject;
 using RotationBall.LevelChange;
+using System.Collections.Generic;
+using System.Collections;
 
 namespace RotationBall.UI
 {
-    public class ButtonsView : IInitializable
+    public class ButtonsView : IInitializable, ILateTickable
     {
         [Zenject.Inject] ButtonsCompoments button;
         [Zenject.Inject] LevelChanger levelChanger;
         [Zenject.Inject] GameController gameController;
-
-        public UnityEvent selectButton;        
+        [Zenject.Inject] BackToMenuButton backToMenuButton;
+        [Zenject.Inject] MonoCoroutine monoCoroutine;
 
 
         public void Initialize()
         {
             UnlockLevel();
-            AddListenersToButtons();
+            AddListenersToButtons();            
+        }
+
+        public void LateTick()
+        {            
+            BackToMenuButtonView();
         }
 
         private void AddListenersToButtons()
@@ -61,22 +68,51 @@ namespace RotationBall.UI
         void StartGame()
         {
             levelChanger.ChangeToLevel(1);
+            gameController.gameState = GameStates.Playing;
         }
+
+        private void BackToMenuButtonView()
+        {
+            if (gameController.gameState == GameStates.Playing)
+            {
+                monoCoroutine.StartCoroutine(Start());                
+            }
+        }        
+
+        IEnumerator Start()
+        {
+            yield return new WaitForSeconds(1f);
+            backToMenuButton.gameObject.SetActive(true);
+        }
+        
 
         void ChooseLevelFromSelectLevelMenu()
         {
-            for (int i = 0; i < button.LevelButton.Count; i++)
-            {
-                if (button.LevelButton[0])
-                {
-                    levelChanger.ChangeToLevel(1);
-                }
-                else if (button.LevelButton[1])
-                {
-                    levelChanger.ChangeToLevel(2);
-                }
-            }
-        }
+            string name = EventSystem.current.currentSelectedGameObject.name;
 
+            switch (name)
+            {
+                case "1":
+                    {
+                        levelChanger.ChangeToLevel(1);
+                        gameController.nextLevelToLoad = 1;
+                        break;
+                    }                    
+                case "2":
+                    {
+                        levelChanger.ChangeToLevel(2);
+                        gameController.nextLevelToLoad = 2;
+                        break;
+                    }
+                case "3":
+                    {
+                        levelChanger.ChangeToLevel(3);
+                        break;
+                    }
+                default:
+                    break;
+            }
+            gameController.gameState = GameStates.Playing;
+        }        
     }
 }

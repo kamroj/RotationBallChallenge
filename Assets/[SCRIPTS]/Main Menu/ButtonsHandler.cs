@@ -11,6 +11,7 @@ namespace RotationBall.UI
         [Zenject.Inject] ButtonsCompoments button;
         [Zenject.Inject] ButtonsView buttonsView;
         [Zenject.Inject] LevelChanger levelChanger;
+        [Zenject.Inject] GameController gameController;
 
         private void GoToSelectLevelView()
         {

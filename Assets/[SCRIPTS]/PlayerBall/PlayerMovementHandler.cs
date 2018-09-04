@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using RotationBall.Audio;
 using UnityEngine;
 using Zenject;
 
@@ -9,6 +8,9 @@ namespace RotationBall
     {
         BallComponents ballComponents;
         CheckIfObjectIsGrounded checkIfObjectIsGrounded;
+
+        [Zenject.Inject] AudioMenager audioMenager;
+        [Zenject.Inject] AudioComponents audioComponents;
 
         private float acceleration;
         private float jumpForce;
@@ -37,6 +39,7 @@ namespace RotationBall
                 jumpForce = ballComponents.jumpForce * Time.deltaTime * 100f;
                 var vertical = Input.GetAxis("Vertical");
                 ballComponents.JumpVelocity(new Vector2(0f, jumpForce));
+                audioMenager.PlayOneShot(audioComponents.jumpClip);
             }
         }
 

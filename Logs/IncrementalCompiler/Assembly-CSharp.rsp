@@ -473,6 +473,7 @@
 -i:"C:/Users/Kamil/Documents/repos/Unity2/RotationBall/Assets/[SCRIPTS]/Main Menu/ButtonsHandler.cs"
 -i:"C:/Users/Kamil/Documents/repos/Unity2/RotationBall/Assets/[SCRIPTS]/Main Menu/ButtonsView.cs"
 -i:"C:/Users/Kamil/Documents/repos/Unity2/RotationBall/Assets/[SCRIPTS]/MonoCoroutine.cs"
+-i:"C:/Users/Kamil/Documents/repos/Unity2/RotationBall/Assets/[SCRIPTS]/OnFinishLiversCoroutine.cs"
 -i:"C:/Users/Kamil/Documents/repos/Unity2/RotationBall/Assets/[SCRIPTS]/ParticleSystem/ParticleComponentList.cs"
 -i:"C:/Users/Kamil/Documents/repos/Unity2/RotationBall/Assets/[SCRIPTS]/PlayerBall/BallComponents.cs"
 -i:"C:/Users/Kamil/Documents/repos/Unity2/RotationBall/Assets/[SCRIPTS]/PlayerBall/BallStateDead.cs"
@@ -480,4 +481,6 @@
 -i:"C:/Users/Kamil/Documents/repos/Unity2/RotationBall/Assets/[SCRIPTS]/PlayerBall/BallTouchedColliderSignal.cs"
 -i:"C:/Users/Kamil/Documents/repos/Unity2/RotationBall/Assets/[SCRIPTS]/PlayerBall/PlayerInputController.cs"
 -i:"C:/Users/Kamil/Documents/repos/Unity2/RotationBall/Assets/[SCRIPTS]/PlayerBall/PlayerMovementHandler.cs"
+-i:"C:/Users/Kamil/Documents/repos/Unity2/RotationBall/Assets/[SCRIPTS]/SFX/AudioComponents.cs"
+-i:"C:/Users/Kamil/Documents/repos/Unity2/RotationBall/Assets/[SCRIPTS]/SFX/AudioMenager.cs"
 -v:0

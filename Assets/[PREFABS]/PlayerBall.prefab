@@ -42,6 +42,7 @@ GameObject:
   - component: {fileID: 58977286587863180}
   - component: {fileID: 114917827997557110}
   - component: {fileID: 114769916462268972}
+  - component: {fileID: 95454636759475782}
   m_Layer: 9
   m_Name: PlayerBall
   m_TagString: Untagged
@@ -70,7 +71,7 @@ Transform:
   m_GameObject: {fileID: 1967752717741198}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: -2.43, z: 0}
-  m_LocalScale: {x: 0.04, y: 0.04, z: 0.06}
+  m_LocalScale: {x: 0.04, y: 0.04, z: 0.04}
   m_Children:
   - {fileID: 4125473696722676}
   m_Father: {fileID: 0}
@@ -111,6 +112,24 @@ CircleCollider2D:
   m_Offset: {x: 0.013578683, y: -0.018031895}
   serializedVersion: 2
   m_Radius: 2.7547555
+--- !u!95 &95454636759475782
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1967752717741198}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8d40707789406d9428b6d01da89a1ab8, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &114769916462268972
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4780,7 +4799,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 4
   m_Sprite: {fileID: 21300000, guid: e2033d8778e33854e8b878542ec1a27c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

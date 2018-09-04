@@ -5,6 +5,7 @@ using Zenject;
 using RotationBall.LevelChange;
 using System.Collections.Generic;
 using System.Collections;
+using RotationBall.Audio;
 
 namespace RotationBall.UI
 {
@@ -15,6 +16,9 @@ namespace RotationBall.UI
         [Zenject.Inject] GameController gameController;
         [Zenject.Inject] BackToMenuButton backToMenuButton;
         [Zenject.Inject] MonoCoroutine monoCoroutine;
+
+        [Zenject.Inject] AudioMenager audioMenager;
+        [Zenject.Inject] AudioComponents audioComponents;
 
 
         public void Initialize()
@@ -54,7 +58,7 @@ namespace RotationBall.UI
         }
 
         void SelectLevelView()
-        {
+        {            
             button.mainMenu.SetActive(false);
             button.levels.SetActive(true);
         }

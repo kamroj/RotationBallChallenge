@@ -50,6 +50,7 @@ namespace RotationBall
         public BallPositionEnum BallStateMain
         {
             get { return _ballStateMain; }
+            set { _ballStateMain = BallStateMain; }
         }
 
         public void ChangeState(BallPositionEnum ballState)

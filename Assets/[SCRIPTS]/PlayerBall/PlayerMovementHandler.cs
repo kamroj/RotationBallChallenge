@@ -36,6 +36,7 @@ namespace RotationBall
             }
             else if (ballComponents.BallStateMain == BallPositionEnum.Grounded)
             {
+                ballComponents.BallStateMain = BallPositionEnum.Jumping;
                 jumpForce = ballComponents.jumpForce * Time.deltaTime * 100f;
                 var vertical = Input.GetAxis("Vertical");
                 ballComponents.JumpVelocity(new Vector2(0f, jumpForce));

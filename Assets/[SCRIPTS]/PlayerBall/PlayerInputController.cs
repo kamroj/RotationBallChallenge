@@ -33,7 +33,7 @@ namespace RotationBall
             particleSystem = _particleSystem;
         }
 
-        private void Update()
+        private void FixedUpdate()
         {
             //CheckIfGrounded();
             TryRotate();

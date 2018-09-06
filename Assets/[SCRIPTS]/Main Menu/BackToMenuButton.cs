@@ -10,8 +10,7 @@ namespace RotationBall.UI
     public class BackToMenuButton : MonoBehaviour
     {
         [SerializeField] Button mainMenuButton;
-        [Zenject.Inject] LevelChanger levelChanger;
-        [Zenject.Inject] GameController gameController;
+        [Zenject.Inject] LevelChanger levelChanger;        
 
 
         public void Start()
@@ -21,17 +20,8 @@ namespace RotationBall.UI
         
 
         public void GoBackToMainMenu()
-        {
-            Debug.Log("I was pressed");
-            gameController.ChangeGameState(GameStates.WaitingToStart);
-            levelChanger.ChangeToLevel(0);
-            StartCoroutine(waitTillFadeOut());
-        }     
-
-        IEnumerator waitTillFadeOut()
-        {
-            yield return new WaitForSeconds(1f);
-            gameObject.SetActive(false);
-        }
+        {            
+            levelChanger.ChangeToLevel(0);            
+        }          
     }
 }

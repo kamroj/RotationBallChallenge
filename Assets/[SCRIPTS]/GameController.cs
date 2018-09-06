@@ -44,7 +44,12 @@ namespace RotationBall
         //}
 
         public void Tick()
-        {            
+        {
+            SwitchGameStates();
+        }
+
+        private void SwitchGameStates()
+        {
             switch (gameState)
             {
                 case GameStates.WaitingToStart:
@@ -67,9 +72,9 @@ namespace RotationBall
                         UpdateNextRound();
                         break;
                     }
-                default:                                            
-                        break;
-                    
+                default:
+                    break;
+
             }
         }
 
@@ -87,7 +92,7 @@ namespace RotationBall
 
         private void UpdateNextRound()
         {
-            gameState = GameStates.Playing;
+            //gameState = (levelChanger.currLevel == 0) ? GameStates.WaitingToStart : GameStates.Playing;
 
             levelReached = (nextLevelToLoad == levelReached) ? levelReached += 1 : levelReached;
             nextLevelToLoad = (nextLevelToLoad == levelChanger.maxLevel) ? nextLevelToLoad = 0 : nextLevelToLoad = levelChanger.currLevel + 1;

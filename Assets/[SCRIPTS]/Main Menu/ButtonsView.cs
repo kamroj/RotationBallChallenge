@@ -9,7 +9,7 @@ using RotationBall.Audio;
 
 namespace RotationBall.UI
 {
-    public class ButtonsView : IInitializable, ILateTickable
+    public class ButtonsView : IInitializable, ITickable
     {
         [Zenject.Inject] ButtonsCompoments button;
         [Zenject.Inject] LevelChanger levelChanger;
@@ -27,7 +27,7 @@ namespace RotationBall.UI
             AddListenersToButtons();            
         }
 
-        public void LateTick()
+        public void Tick()
         {            
             BackToMenuButtonView();
         }
@@ -81,17 +81,19 @@ namespace RotationBall.UI
 
         private void BackToMenuButtonView()
         {
-            if (gameController.gameState == GameStates.Playing)
+            bool setActive = gameController.gameState == GameStates.Playing;
+            if (setActive == backToMenuButton.gameObject.activeInHierarchy)
             {
-                monoCoroutine.StartCoroutine(Start());                
+                return;
             }
+            else monoCoroutine.WaitAndSetActive(backToMenuButton.gameObject, 0.95f, setActive);
         }        
 
-        IEnumerator Start()
-        {
-            yield return new WaitForSeconds(1f);
-            backToMenuButton.gameObject.SetActive(true);
-        }
+        //IEnumerator Start()
+        //{
+        //    yield return new WaitForSeconds(1f);
+        //    backToMenuButton.gameObject.SetActive(true);
+        //}
         
 
         void ChooseLevelFromSelectLevelMenu()

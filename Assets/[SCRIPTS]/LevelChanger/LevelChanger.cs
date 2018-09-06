@@ -5,7 +5,8 @@ namespace RotationBall.LevelChange
 {
     public class LevelChanger : MonoBehaviour
     {
-        public Animator animator;    
+        public Animator animator;
+        [Zenject.Inject] GameController gameController;
 
         private int levelToLoad;
         public int maxLevel
@@ -27,6 +28,7 @@ namespace RotationBall.LevelChange
 
         public void ChangeToLevel(int levelIndex)
         {
+            gameController.gameState = (levelIndex == 0) ? GameStates.WaitingToStart : GameStates.Playing;
             levelToLoad = levelIndex;
             //gameController.gameState = _gameState;
             animator.SetTrigger("FadeOut");

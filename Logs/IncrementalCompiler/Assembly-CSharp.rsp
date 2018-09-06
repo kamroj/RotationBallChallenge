@@ -466,8 +466,8 @@
 -i:"C:/Users/Kamil/Documents/repos/Unity2/RotationBall/Assets/[SCRIPTS]/GameController.cs"
 -i:"C:/Users/Kamil/Documents/repos/Unity2/RotationBall/Assets/[SCRIPTS]/Hole.cs"
 -i:"C:/Users/Kamil/Documents/repos/Unity2/RotationBall/Assets/[SCRIPTS]/Installers/GlobalInstaller.cs"
--i:"C:/Users/Kamil/Documents/repos/Unity2/RotationBall/Assets/[SCRIPTS]/Installers/InstallerUI.cs"
 -i:"C:/Users/Kamil/Documents/repos/Unity2/RotationBall/Assets/[SCRIPTS]/Installers/MainInstaller.cs"
+-i:"C:/Users/Kamil/Documents/repos/Unity2/RotationBall/Assets/[SCRIPTS]/Installers/MainMenuInstaller.cs"
 -i:"C:/Users/Kamil/Documents/repos/Unity2/RotationBall/Assets/[SCRIPTS]/LevelChanger/LevelChanger.cs"
 -i:"C:/Users/Kamil/Documents/repos/Unity2/RotationBall/Assets/[SCRIPTS]/Main Menu/BackToMenuButton.cs"
 -i:"C:/Users/Kamil/Documents/repos/Unity2/RotationBall/Assets/[SCRIPTS]/Main Menu/ButtonAnimationView.cs"
@@ -484,5 +484,8 @@
 -i:"C:/Users/Kamil/Documents/repos/Unity2/RotationBall/Assets/[SCRIPTS]/PlayerBall/PlayerInputController.cs"
 -i:"C:/Users/Kamil/Documents/repos/Unity2/RotationBall/Assets/[SCRIPTS]/PlayerBall/PlayerMovementHandler.cs"
 -i:"C:/Users/Kamil/Documents/repos/Unity2/RotationBall/Assets/[SCRIPTS]/SFX/AudioComponents.cs"
+-i:"C:/Users/Kamil/Documents/repos/Unity2/RotationBall/Assets/[SCRIPTS]/SFX/AudioComponentsLevels.cs"
+-i:"C:/Users/Kamil/Documents/repos/Unity2/RotationBall/Assets/[SCRIPTS]/SFX/AudioComponentsMainMenu.cs"
+-i:"C:/Users/Kamil/Documents/repos/Unity2/RotationBall/Assets/[SCRIPTS]/SFX/AudioController.cs"
 -i:"C:/Users/Kamil/Documents/repos/Unity2/RotationBall/Assets/[SCRIPTS]/SFX/AudioMenager.cs"
 -v:0

@@ -34,6 +34,7 @@ public class GlobalInstaller : MonoInstaller<GlobalInstaller>
     {
         Container.Bind<AudioComponents>().FromInstance(audioComponents).AsSingle();
         Container.Bind<AudioMenager>().AsSingle();
-        Container.Bind<AudioSource>().FromComponentInNewPrefab(audioSource).AsSingle();
+        Container.Bind<AudioSource>().FromComponentInNewPrefab(audioSource).AsSingle().NonLazy();
+        Container.BindInterfacesTo<AudioController>().AsSingle().NonLazy();
     }
 }

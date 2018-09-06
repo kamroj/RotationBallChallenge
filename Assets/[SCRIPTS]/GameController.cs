@@ -16,7 +16,7 @@ namespace RotationBall
         NextRound
     }
 
-    public class GameController : IInitializable, ITickable
+    public class GameController : ITickable
     {
         [Zenject.Inject] LevelChanger levelChanger;
         [Zenject.Inject] AudioMenager audioMenager;
@@ -117,11 +117,6 @@ namespace RotationBall
         private void WaitingForStart()
         {
             
-        }
-
-        public void Initialize()
-        {
-            audioMenager.Play(audio.music);
-        }
+        }        
     }
 }

@@ -2,6 +2,7 @@ using UnityEngine;
 using Zenject;
 using RotationBall;
 using RotationBall.LevelChange;
+using RotationBall.Audio;
 
 public class MainInstaller : MonoInstaller<MainInstaller>
 {
@@ -10,6 +11,7 @@ public class MainInstaller : MonoInstaller<MainInstaller>
     [SerializeField] ChangeSceneByZoomView camera;
     [SerializeField] CheckIfObjectIsGrounded checkIfObjectIsGrounded;
     [SerializeField] ParticleComponentList jumpingParticles;
+    
 
     public override void InstallBindings()
     {
@@ -28,7 +30,8 @@ public class MainInstaller : MonoInstaller<MainInstaller>
         SignalBusInstaller.Install(Container);
         Container.DeclareSignal<BallTouchedColliderSignal>();
 
-        Container.BindInterfacesTo<PlayerMovementHandler>().AsCached();
+        Container.BindInterfacesTo<PlayerMovementHandler>().AsCached();        
         
     }
+    
 }

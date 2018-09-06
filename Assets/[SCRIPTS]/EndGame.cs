@@ -7,13 +7,14 @@ namespace RotationBall
 {
     public class EndGame : MonoBehaviour
     {
-        public float timeToWait = 4f;
+        [SerializeField] private float timeToWait = 4f;
         [Zenject.Inject] LevelChanger levelChanger;
         [Zenject.Inject] GameController gameController;
         [Zenject.Inject] BackToMenuButton backToMenuButton;
 
         private void Start()
         {
+            //todo wywalić buttonView niech odpowiedzialne za to będą stany gry
             backToMenuButton.gameObject.SetActive(false);
             StartCoroutine(EndGameSceneEnumeratior());
         }

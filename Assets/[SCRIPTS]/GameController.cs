@@ -88,12 +88,19 @@ namespace RotationBall
         private void UpdateNextRound()
         {
             gameState = GameStates.Playing;
-            if (nextLevelToLoad == levelReached)
-            {
-                levelReached += 1;
-            }
-            nextLevelToLoad += 1;
+
+            levelReached = (nextLevelToLoad == levelReached) ? levelReached += 1 : levelReached;
+            nextLevelToLoad = (nextLevelToLoad == levelChanger.maxLevel) ? nextLevelToLoad = 0 : nextLevelToLoad = levelChanger.currLevel + 1;
+
+            //if (nextLevelToLoad == levelReached)
+            //{
+            //    levelReached += 1;
+            //}
+            //nextLevelToLoad += 1;
             Debug.Log("ShouldChange");
+
+            //nextLevelToLoad > levelChanger.maxLevel ? levelChanger.ChangeToLevel(0) : levelChanger.ChangeToLevel(nextLevelToLoad);
+            
             levelChanger.ChangeToLevel(nextLevelToLoad);
         }
 

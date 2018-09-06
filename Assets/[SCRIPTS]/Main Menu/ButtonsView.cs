@@ -60,17 +60,13 @@ namespace RotationBall.UI
         void SelectLevelView()
         {
             monoCoroutine.WaitAndSetActive(button.mainMenu, 0.4f, false);
-            monoCoroutine.WaitAndSetActive(button.levels, 0.4f, true);
-            //button.mainMenu.SetActive(false);
-            //button.levels.SetActive(true);
+            monoCoroutine.WaitAndSetActive(button.levels, 0.4f, true);           
         }
 
         void BackToMainMenu()
         {
             monoCoroutine.WaitAndSetActive(button.mainMenu, 0.4f, true);
-            monoCoroutine.WaitAndSetActive(button.levels, 0.4f, false);
-            //button.mainMenu.SetActive(true);
-            //button.levels.SetActive(false);
+            monoCoroutine.WaitAndSetActive(button.levels, 0.4f, false);         
         }
 
         void StartGame()
@@ -89,15 +85,9 @@ namespace RotationBall.UI
             else monoCoroutine.WaitAndSetActive(backToMenuButton.gameObject, 0.95f, setActive);
         }        
 
-        //IEnumerator Start()
-        //{
-        //    yield return new WaitForSeconds(1f);
-        //    backToMenuButton.gameObject.SetActive(true);
-        //}
-        
-
         void ChooseLevelFromSelectLevelMenu()
         {
+            //todo zmienić mechanikę zmiany poziomów bo jest beznadziejna, też nie wiem czy powinna być tu czy handlerze.
             string name = EventSystem.current.currentSelectedGameObject.name;
 
             switch (name)

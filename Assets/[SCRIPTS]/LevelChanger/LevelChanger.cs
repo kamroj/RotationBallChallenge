@@ -14,7 +14,7 @@ namespace RotationBall.LevelChange
             get
             {
                 return SceneManager.sceneCountInBuildSettings - 1;
-            }            
+            }
         }
 
         public int currLevel
@@ -22,13 +22,13 @@ namespace RotationBall.LevelChange
             get
             {
                 return SceneManager.GetActiveScene().buildIndex;
-            }            
+            }
         }
 
 
         public void ChangeToLevel(int levelIndex)
         {
-            gameController.gameState = (levelIndex == 0) ? GameStates.WaitingToStart : GameStates.Playing;
+            gameController.gameState = (levelIndex == 0 || levelIndex == maxLevel) ? GameStates.WaitingToStart : GameStates.Playing;
             levelToLoad = levelIndex;
             //gameController.gameState = _gameState;
             animator.SetTrigger("FadeOut");

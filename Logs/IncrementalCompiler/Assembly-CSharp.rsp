@@ -456,6 +456,7 @@
 -i:"C:/Users/Kamil/Documents/repos/Unity2/RotationBall/Assets/[OTHER PACKAGES]/Spine/spine-unity/SkeletonUtility/SkeletonUtilityBone.cs"
 -i:"C:/Users/Kamil/Documents/repos/Unity2/RotationBall/Assets/[OTHER PACKAGES]/Spine/spine-unity/SkeletonUtility/SkeletonUtilityConstraint.cs"
 -i:"C:/Users/Kamil/Documents/repos/Unity2/RotationBall/Assets/[OTHER PACKAGES]/Spine/spine-unity/SpineAttributes.cs"
+-i:"C:/Users/Kamil/Documents/repos/Unity2/RotationBall/Assets/[SCRIPTS]/ButtonAnimationView.cs"
 -i:"C:/Users/Kamil/Documents/repos/Unity2/RotationBall/Assets/[SCRIPTS]/ChangeSceneByZoomView.cs"
 -i:"C:/Users/Kamil/Documents/repos/Unity2/RotationBall/Assets/[SCRIPTS]/CheckIfObjectIsGrounded.cs"
 -i:"C:/Users/Kamil/Documents/repos/Unity2/RotationBall/Assets/[SCRIPTS]/CoRoutineZenject.cs"

@@ -18,7 +18,7 @@ namespace RotationBall.UI
         [Zenject.Inject] MonoCoroutine monoCoroutine;
 
         [Zenject.Inject] AudioMenager audioMenager;
-        [Zenject.Inject] AudioComponents audioComponents;
+        [Zenject.Inject] AudioComponents audioComponents;        
 
 
         public void Initialize()
@@ -58,15 +58,19 @@ namespace RotationBall.UI
         }
 
         void SelectLevelView()
-        {            
-            button.mainMenu.SetActive(false);
-            button.levels.SetActive(true);
+        {
+            monoCoroutine.WaitAndSetActive(button.mainMenu, 0.4f, false);
+            monoCoroutine.WaitAndSetActive(button.levels, 0.4f, true);
+            //button.mainMenu.SetActive(false);
+            //button.levels.SetActive(true);
         }
 
         void BackToMainMenu()
         {
-            button.mainMenu.SetActive(true);
-            button.levels.SetActive(false);
+            monoCoroutine.WaitAndSetActive(button.mainMenu, 0.4f, true);
+            monoCoroutine.WaitAndSetActive(button.levels, 0.4f, false);
+            //button.mainMenu.SetActive(true);
+            //button.levels.SetActive(false);
         }
 
         void StartGame()
